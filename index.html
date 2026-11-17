@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hochzeit Tamara &amp; Marvin</title>
+<meta name="description" content="Tamara &amp; Marvin heiraten am 22. Mai 2027. Ablauf, Orte, Anreise, Hotels und Rückmeldung.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F4F0E8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236E1E2F'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' text-anchor='middle' fill='%23F4F0E8'%3ET%26amp;M%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout: blurred photos glow behind frosted panels; hero card morphs to full screen on scroll, then melts into the background */
+  --paper:#F4F0E8;
+  --ink:#1F1719;
+  --muted:#645A52;
+  --line:rgba(31,23,25,.12);
+  --wine:#6E1E2F;          /* burgundy: names, main actions, progress */
+  --wine-soft:rgba(110,30,47,.10);
+  --olive:#5F6436;         /* olive: tags, selections, price bars */
+  --olive-soft:rgba(95,100,54,.14);
+  --glass:rgba(255,255,255,.58);
+  --glass-line:rgba(255,255,255,.75);
+  --font-display:"Cormorant Garamond","Iowan Old Style","Times New Roman",serif;
+  --font-script:"Pinyon Script","Snell Roundhand",cursive;
+  --font-body:-apple-system,BlinkMacSystemFont,"Hanken Grotesk","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --radius:26px;
+  --gutter:clamp(16px,5vw,40px);
+  --nav-h:64px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 var(--gutter)}
+.narrow{max-width:720px}
+.label{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.h2{font-family:var(--font-display);font-weight:500;font-size:clamp(38px,7vw,58px);line-height:1;letter-spacing:-.01em}
+.lead{font-size:18px;color:var(--muted);max-width:58ch}
+.num{font-variant-numeric:tabular-nums}
+.glass{background:var(--glass);border:1px solid var(--glass-line);border-radius:var(--radius);box-shadow:0 10px 40px -12px rgba(40,35,30,.18)}
+
+/* ---------- ambient background ---------- */
+.amb{position:fixed;inset:0;z-index:-1;overflow:hidden;background:var(--paper)}
+.amb img{position:absolute;inset:-6%;width:112%;height:112%;max-width:none;object-fit:cover;opacity:0;transition:opacity 1.4s ease;transform:scale(1.05)}
+.amb img.on{opacity:1}
+.amb::after{content:"";position:absolute;inset:0;background:radial-gradient(90% 55% at 0% 0%,rgba(110,30,47,.10),transparent 70%),radial-gradient(90% 55% at 100% 100%,rgba(95,100,54,.14),transparent 70%),linear-gradient(180deg,rgba(244,240,232,.66),rgba(244,240,232,.78))}
+
+/* ---------- header ---------- */
+.top{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+.top.solid{background:rgba(244,240,232,.72);backdrop-filter:saturate(1.6) blur(18px);-webkit-backdrop-filter:saturate(1.6) blur(18px);box-shadow:0 1px 0 var(--line)}
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.mono{color:var(--wine);font-family:var(--font-script);font-size:30px;line-height:1;text-decoration:none;padding-top:6px}
+.top__links{display:none;gap:2px}
+.top__links a{text-decoration:none;font-size:15px;color:var(--muted);padding:8px 12px;border-radius:999px;transition:background .2s,color .2s}
+.top__links a:hover,.top__links a.active{color:var(--wine);background:rgba(31,23,25,.07)}
+@media (min-width:960px){.top__links{display:flex}}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;background:var(--wine);color:var(--paper);text-decoration:none;font:600 16px/1 var(--font-body);border:1px solid var(--wine);cursor:pointer;transition:transform .2s var(--ease),background .2s}
+.btn:active{transform:scale(.97)}
+.btn--ghost{background:rgba(255,255,255,.5);color:var(--ink);border-color:rgba(31,23,25,.14)}
+.btn--ghost:hover{border-color:var(--ink)}
+.btn--sm{min-height:40px;padding:0 16px;font-size:14.5px}
+.btn--sea{background:var(--wine);border-color:var(--wine);color:#fff}
+.btnrow{display:flex;flex-wrap:wrap;gap:10px}
+
+/* ---------- hero (pinned morph) ---------- */
+.hero{position:relative;height:155vh;height:155svh}
+.hero__stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.hero__bg{position:absolute;inset:-5%;width:110%;height:110%;max-width:none;object-fit:cover}
+.hero__bg-tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(244,240,232,.55),rgba(244,240,232,.35) 60%,rgba(244,240,232,.6))}
+.hero__layout{position:absolute;inset:0;display:grid;grid-template-rows:auto 1fr;grid-template-columns:minmax(0,1fr);justify-items:center;padding:84px var(--gutter) calc(var(--nav-h) + 50px);gap:22px}
+@media (min-width:960px){.hero__layout{padding-bottom:40px}}
+.hero__text{text-align:center;display:grid;gap:6px;justify-items:center;will-change:transform,opacity}
+.names{color:var(--wine);font-family:var(--font-script);font-weight:400;font-size:clamp(44px,12.6vw,112px);line-height:1.05;margin-top:6px;max-width:100%}
+.hero__date{font-family:var(--font-display);font-size:clamp(21px,5vw,30px)}
+.hero__slot{height:100%;aspect-ratio:3/2;width:auto;max-width:100%;min-height:0;border-radius:var(--radius)}
+.hero__photo{position:absolute;left:5%;top:34%;width:90%;height:52%;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(40,35,30,.45)}
+.hero__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% 74%}
+.hero__photo .sharp{transform-origin:50% 70%;will-change:transform}
+.hero__photo .soft{opacity:0}
+.hero__shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.5));opacity:0}
+.hero__tint2{position:absolute;inset:0;background:rgba(244,240,232,.72);opacity:0}
+.hero__over{position:absolute;left:0;right:0;bottom:calc(var(--nav-h) + 40px);text-align:center;color:#fff;opacity:0;padding:0 20px}
+@media (min-width:960px){.hero__over{bottom:64px}}
+.hero__over .s{font-family:var(--font-script);font-size:clamp(52px,12vw,104px);line-height:1}
+.hero__over .d{font-size:14px;letter-spacing:.32em;text-transform:uppercase;margin-top:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.7);border:1px solid var(--glass-line);border-radius:999px;padding:7px 14px;font-size:14.5px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.chip b{font-variant-numeric:tabular-nums}
+.hero__cta{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:2}
+.hero__hint{position:absolute;left:50%;bottom:calc(var(--nav-h) + 20px);transform:translateX(-50%);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:4px}
+.hero__hint i{width:1px;height:18px;background:var(--muted);animation:hint 1.8s ease-in-out infinite}
+@media (min-width:960px){.hero__hint{bottom:10px}}
+@keyframes hint{0%,100%{transform:translateY(-3px);opacity:.3}50%{transform:translateY(4px);opacity:1}}
+
+/* ---------- reveal ---------- */
+.rv{--r:1;transform:translate3d(0,calc((1 - var(--r)) * 34px),0);opacity:calc(.3 + .7 * var(--r))}
+
+/* ---------- sections ---------- */
+section.block,.hs,footer{position:relative;z-index:1}
+section.block{padding:96px 0 0}
+.after-hero{margin-top:-15vh;margin-top:-15svh}
+.sechead{display:grid;gap:12px;margin-bottom:30px}
+
+/* intro statement */
+.statement{font-family:var(--font-display);font-size:clamp(28px,6.4vw,46px);line-height:1.22;letter-spacing:-.005em}
+.statement .w{opacity:var(--o,1);transition:opacity .25s linear}
+.sign{color:var(--wine);font-family:var(--font-script);font-size:40px;line-height:1;margin-top:22px}
+
+/* countdown + facts */
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.count div{padding:16px 6px 12px;text-align:center}
+.count b{color:var(--wine);display:block;font-family:var(--font-display);font-weight:500;font-size:clamp(34px,9vw,58px);line-height:1;font-variant-numeric:tabular-nums}
+.count span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (min-width:860px){.facts{grid-template-columns:repeat(3,1fr)}}
+.fact{padding:18px 18px 16px;display:grid;gap:4px;align-content:start}
+.fact dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.fact dd{margin:0;font-weight:600;line-height:1.35}
+.fact dd small{display:block;font-weight:400;color:var(--muted);font-size:14.5px;margin-top:2px}
+.cal{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cal span{font-size:15px;color:var(--muted);margin-right:2px}
+
+/* timeline */
+.tlw{position:relative}
+.tl{list-style:none;margin:0;padding:0}
+.tl__rail{position:absolute;left:calc(74px + 12px + 10px);top:14px;bottom:28px;width:2px;background:rgba(31,23,25,.1);border-radius:2px}
+.tl__rail i{position:absolute;left:0;top:0;width:100%;height:calc(var(--tp,0) * 100%);background:var(--wine);border-radius:2px}
+.tl li{display:grid;grid-template-columns:74px 22px 1fr;gap:0 12px;padding-bottom:30px;position:relative}
+.tl time{font-family:var(--font-display);font-size:25px;line-height:1.1;font-variant-numeric:tabular-nums;text-align:right;padding-top:2px}
+.tl time small{display:block;font-family:var(--font-body);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.dot{width:22px;height:22px;border-radius:50%;border:2px solid rgba(31,23,25,.25);background:var(--paper);margin-top:5px;position:relative;z-index:1;transition:border-color .4s,background .4s,transform .4s var(--ease)}
+.tl li.on .dot{border-color:var(--wine);background:var(--wine);transform:scale(1.08)}
+.tl li.sun.on .dot{border-color:var(--olive);background:var(--olive)}
+.tl .card{padding:16px 18px}
+.tl h3{font-size:18.5px;font-weight:600;line-height:1.3}
+.tl p{color:var(--muted);margin-top:4px;font-size:16px}
+.tl .sun h3{color:var(--olive)}
+.where{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.75);border:1px solid var(--line);text-decoration:none}
+.where svg{width:15px;height:15px}
+
+/* venues */
+.venues{display:grid;gap:56px}
+@media (min-width:960px){.venues{grid-template-columns:1fr 1fr;gap:28px}}
+.scene{position:relative;overflow:hidden;border-radius:var(--radius);aspect-ratio:4/3;box-shadow:0 20px 50px -20px rgba(40,35,30,.35)}
+.scene img{position:absolute;left:0;top:-10%;width:100%;height:120%;max-width:none;object-fit:cover;will-change:transform}
+.scene::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,0) 30%)}
+.scene__label{z-index:1}
+.scene__label{position:absolute;left:16px;top:16px}
+.venue__card{position:relative;margin:-70px 12px 0;padding:24px 20px;display:grid;gap:18px;background:rgba(255,255,255,.78);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4)}
+.venue__card h3{font-family:var(--font-display);font-weight:500;font-size:34px;line-height:1.02}
+.venue__card address{font-style:normal;color:var(--muted);margin-top:6px}
+.vk{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 12px}
+.vk .when{font-family:var(--font-display);font-size:22px}
+.venue dl{margin:0;display:grid;gap:14px}
+.venue dt{font-weight:600;font-size:15px;display:flex;align-items:center;gap:8px}
+.venue dt svg{width:18px;height:18px;flex:none}
+.venue dd{margin:4px 0 0;color:var(--muted);font-size:16px}
+.venue dd ul{margin:6px 0 0;padding-left:18px}
+.venue dd li{margin:2px 0}
+
+/* journey carousel */
+.legs{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px var(--gutter) 18px;margin:0 calc(var(--gutter) * -1);scrollbar-width:none}
+.legs::-webkit-scrollbar{display:none}
+.leg{flex:0 0 min(84%,360px);scroll-snap-align:center;padding:22px 20px;display:grid;gap:10px;align-content:start}
+@media (min-width:960px){.legs{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;margin:0;padding:0}.leg{flex:auto}}
+.leg__n{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.leg__n b{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--olive);color:var(--paper);font-family:var(--font-display);font-size:18px;letter-spacing:0;font-weight:500}
+.leg h3{font-size:20px;font-weight:600;line-height:1.25}
+.leg p{color:var(--muted);font-size:16px}
+.leg p b{color:var(--ink);font-weight:600}
+.swipe{font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:6px}
+@media (min-width:960px){.swipe{display:none}}
+
+.owl__d{display:flex;flex-wrap:wrap;gap:6px}
+.owl .maplink{margin-left:0;margin-top:auto}
+
+/* hotels */
+.seg{display:inline-grid;grid-auto-flow:column;gap:4px;padding:4px;border-radius:999px;background:rgba(255,255,255,.55);border:1px solid var(--glass-line);margin-bottom:18px}
+.seg button{border:0;background:transparent;padding:10px 18px;border-radius:999px;font-size:15px;font-weight:600;color:var(--muted);cursor:pointer;transition:background .25s,color .25s}
+.seg button[aria-selected="true"]{background:var(--olive);color:var(--paper)}
+.hlist{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.hotel{padding:18px 18px 16px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px}
+.hotel__rank{font-family:var(--font-display);font-size:30px;line-height:1;width:34px;text-align:center;color:var(--olive);font-variant-numeric:tabular-nums}
+.hotel__name{font-weight:600;font-size:17.5px;line-height:1.3}
+.hotel__addr{font-size:14.5px;color:var(--muted)}
+.hotel__body{grid-column:1 / -1;display:grid;gap:10px;margin-top:8px}
+.hotel__txt{color:var(--muted);font-size:16px}
+.price{display:grid;gap:6px}
+.price__row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.price__val{font-weight:600;font-variant-numeric:tabular-nums}
+.price__note{font-size:13.5px;color:var(--muted)}
+.bar{position:relative;height:8px;border-radius:8px;background:rgba(31,23,25,.08)}
+.bar i{position:absolute;top:0;bottom:0;left:calc(var(--a) * 100%);right:calc((1 - var(--b)) * 100%);border-radius:8px;background:linear-gradient(90deg,var(--olive),#9AA06A)}
+.scale{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;padding:0 18px;margin:0 0 8px}
+.hotel__meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tag{font-size:13px;font-weight:500;padding:4px 10px;border-radius:999px;background:var(--olive-soft);color:var(--olive)}
+.tag--top{background:var(--wine);color:var(--paper)}
+.maplink{font-size:14.5px;font-weight:600;color:var(--olive);text-decoration:none;margin-left:auto;padding:10px 0}
+.maplink:hover{text-decoration:underline}
+.hint{margin-top:18px;padding:16px 18px;font-size:15.5px;color:var(--muted)}
+.hint b{color:var(--ink)}
+
+/* info accordion */
+.acc{display:grid;gap:10px}
+.acc details{padding:0 18px}
+.acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-size:18px;font-weight:600}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary .chev{width:30px;height:30px;border-radius:50%;background:rgba(31,23,25,.06);display:grid;place-items:center;flex:none;transition:transform .3s var(--ease)}
+.acc details[open] summary .chev{transform:rotate(45deg)}
+.acc .body{padding:0 0 20px;color:var(--muted);display:grid;gap:10px;max-width:62ch}
+.acc .body b{color:var(--ink)}
+
+/* rsvp */
+.rsvp{padding:28px 20px;display:grid;gap:24px}
+@media (min-width:700px){.rsvp{padding:36px}}
+.field{display:grid;gap:8px}
+.field > label,.field > .flabel{font-weight:600;font-size:15.5px}
+input[type=text],textarea{width:100%;font:inherit;font-size:17px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.85);color:var(--ink)}
+input:focus,textarea:focus{outline:2px solid var(--olive);outline-offset:0;border-color:transparent}
+textarea{min-height:96px;resize:vertical}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input,.chips input{position:absolute;opacity:0;pointer-events:none}
+.choice label{display:grid;gap:2px;text-align:center;padding:16px 10px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.85);cursor:pointer;font-weight:600;transition:all .25s var(--ease)}
+.choice label small{font-weight:400;color:var(--muted);font-size:14px}
+.choice input:checked + label{border-color:var(--wine);background:var(--wine);color:var(--paper);transform:scale(1.02)}
+.choice input:checked + label small{color:rgba(244,240,232,.75)}
+.choice input:focus-visible + label,.chips input:focus-visible + label{outline:2px solid var(--olive);outline-offset:2px}
+.stepper{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.85);width:max-content}
+.stepper button{width:48px;height:48px;border:0;background:none;font-size:24px;line-height:1;cursor:pointer;border-radius:50%}
+.stepper button:disabled{color:rgba(31,23,25,.2);cursor:default}
+.stepper output{min-width:44px;text-align:center;font-weight:600;font-size:18px;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{position:relative}
+.chips label{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.85);cursor:pointer;font-size:15.5px;user-select:none;transition:all .2s}
+.chips input:checked + label{background:var(--olive);border-color:var(--olive);color:#fff}
+.err{color:#9b2c2c;font-size:14.5px;font-weight:500}
+.result{display:grid;gap:14px;border-top:1px solid var(--line);padding-top:22px}
+.result h3{font-family:var(--font-display);font-weight:500;font-size:30px}
+.result pre{margin:0;white-space:pre-wrap;font:15px/1.55 var(--font-body);background:rgba(244,240,232,.9);border-radius:14px;padding:16px}
+.small{font-size:14px;color:var(--muted)}
+
+/* gallery: pinned horizontal scroll */
+.hs{position:relative;padding-top:96px}
+.hs__stage{display:grid;grid-template-columns:minmax(0,1fr);align-content:center;gap:26px}
+.hs__track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gutter) 10px;scrollbar-width:none}
+.hs__track::-webkit-scrollbar{display:none}
+.hs__track button{flex:none;height:min(60vh,520px);aspect-ratio:2/3;padding:0;border:0;border-radius:22px;overflow:hidden;cursor:zoom-in;scroll-snap-align:center;box-shadow:0 18px 40px -18px rgba(40,35,30,.4);background:#ddd}
+.hs__track button.w{aspect-ratio:3/2.2}
+.hs__track img{width:100%;height:100%;object-fit:cover;transform:scale(var(--s,1.06));transition:transform .2s linear}
+.hs__bar{height:3px;border-radius:3px;background:rgba(31,23,25,.1);overflow:hidden;max-width:240px;margin:0 auto}
+.hs__bar i{display:block;height:100%;width:calc(var(--hp,0) * 100%);background:var(--wine)}
+.hs.pinned{padding-top:0}
+.hs.pinned .hs__stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;padding-top:60px}
+.hs.pinned .hs__track{overflow:visible;scroll-snap-type:none;will-change:transform}
+dialog.lb{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%}
+dialog.lb::backdrop{background:rgba(16,15,14,.92);backdrop-filter:blur(8px)}
+.lb__in{position:fixed;inset:0;display:grid;place-items:center;padding:56px 12px}
+.lb__in img{max-height:100%;max-width:100%;object-fit:contain;border-radius:12px}
+.lb__btn{position:fixed;width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.16);color:#fff;font-size:26px;cursor:pointer;display:grid;place-items:center}
+.lb__close{top:12px;right:12px}.lb__prev{left:12px;top:50%;transform:translateY(-50%)}.lb__next{right:12px;top:50%;transform:translateY(-50%)}
+
+/* footer */
+footer{padding:96px 0 calc(var(--nav-h) + 40px);text-align:center}
+@media (min-width:960px){footer{padding-bottom:48px}}
+.skyline{width:min(560px,100%);height:auto;opacity:.8}
+footer .mono{font-size:56px}
+footer p{color:var(--muted)}
+
+/* language switch */
+.top__right{display:flex;align-items:center;gap:8px}
+.lang{display:inline-grid;grid-auto-flow:column;padding:3px;border-radius:999px;background:rgba(255,255,255,.6);border:1px solid var(--glass-line)}
+.lang button{border:0;background:transparent;font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--muted);padding:7px 10px;border-radius:999px;cursor:pointer;min-width:38px}
+.lang button[aria-pressed="true"]{background:var(--olive);color:var(--paper)}
+@media (max-width:380px){.top__right .btn--sm{padding:0 12px;font-size:13.5px}}
+
+/* live mode (wedding day) */
+.live{position:fixed;top:66px;left:10px;right:10px;z-index:45;max-width:560px;margin:0 auto}
+.live__in{display:flex;align-items:center;gap:12px;padding:12px 12px 12px 16px;background:rgba(255,255,255,.86);backdrop-filter:saturate(1.6) blur(18px);-webkit-backdrop-filter:saturate(1.6) blur(18px);border:1px solid var(--glass-line);border-radius:20px;box-shadow:0 14px 34px -14px rgba(40,25,25,.35)}
+.live__dot{flex:none;width:11px;height:11px;border-radius:50%;background:var(--wine);animation:pulse 1.8s ease-out infinite}
+.live__txt{flex:1;min-width:0;display:grid;gap:1px}
+.live__k{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);font-weight:600}
+.live__now{font-weight:600;line-height:1.3}
+.live__next{font-size:14px;color:var(--muted);line-height:1.35}
+.live__next:empty{display:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(110,30,47,.45)}80%,100%{box-shadow:0 0 0 12px rgba(110,30,47,0)}}
+.is-live .hero__layout{padding-top:158px}
+.tl li.now .dot{border-color:var(--wine);background:var(--paper);animation:pulse 1.8s ease-out infinite}
+.tl li.now .card{border-color:rgba(110,30,47,.4);box-shadow:0 0 0 2px rgba(110,30,47,.12),0 10px 40px -12px rgba(40,35,30,.18)}
+
+/* font size */
+.fs{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--glass-line);background:rgba(255,255,255,.6);font:600 14px/1 var(--font-body);color:var(--ink);cursor:pointer;flex:none}
+.fs[aria-pressed="true"]{background:var(--wine);color:var(--paper);border-color:var(--wine)}
+@media (max-width:959px){.top__right .btn--sm{display:none}}
+html.big main section.block > .wrap,html.big footer > .wrap,html.big .hs .sechead{zoom:1.15}
+
+/* copy address */
+.copy{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font:600 14px/1 var(--font-body);color:var(--wine);background:var(--wine-soft);border:0;border-radius:999px;padding:8px 12px;cursor:pointer}
+.copy svg{width:15px;height:15px}
+
+/* overview map */
+.map{padding:12px 12px 14px;margin:0 0 16px}
+.map svg{width:100%;height:auto;display:block}
+.map .m-l{font:600 12.5px var(--font-body);fill:var(--ink)}
+.map .m-s{font:12px var(--font-body);fill:var(--muted)}
+.map .m-c{font:500 11px var(--font-body);letter-spacing:.2em;fill:var(--muted)}
+.map .halo{paint-order:stroke;stroke:rgba(255,255,255,.9);stroke-width:4px;stroke-linejoin:round}
+.map__legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--muted);padding:6px 6px 0}
+.map__legend b{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--olive);color:var(--paper);font-size:12px;margin-right:6px;font-weight:600}
+
+/* answered status */
+.answered{padding:20px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center;margin-bottom:14px}
+.answered__check{width:46px;height:46px;border-radius:50%;background:var(--olive);color:var(--paper);display:grid;place-items:center;font-size:22px;grid-row:span 2}
+.answered__t{font-weight:600;font-size:18px;line-height:1.3}
+.answered__d{color:var(--muted)}
+.answered__more{grid-column:1 / -1;display:grid;gap:10px;justify-items:start;margin-top:10px}
+.tabbar a{position:relative}
+.tabbar a.done::after{content:"✓";position:absolute;top:7px;left:calc(50% + 6px);width:16px;height:16px;border-radius:50%;background:var(--olive);color:#fff;font-size:10px;line-height:16px;text-align:center}
+
+/* reminder + back to top */
+.remind{position:fixed;z-index:44;left:10px;right:64px;bottom:calc(var(--nav-h) + 20px);display:flex;align-items:center;gap:10px;padding:8px 8px 8px 16px;border-radius:999px;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glass-line);box-shadow:0 10px 30px -12px rgba(40,25,25,.35);font-size:14px;transition:opacity .3s,transform .3s var(--ease)}
+.remind.off{opacity:0;transform:translateY(12px);pointer-events:none}
+.remind p{flex:1;min-width:0;line-height:1.3}
+.remind a{font-weight:600;color:var(--wine);text-decoration:none;white-space:nowrap}
+.remind button{border:0;background:rgba(31,23,25,.07);width:30px;height:30px;border-radius:50%;cursor:pointer;flex:none;font-size:17px;line-height:1}
+.totop{position:fixed;z-index:44;right:10px;bottom:calc(var(--nav-h) + 20px);width:46px;height:46px;border-radius:50%;border:1px solid var(--glass-line);background:rgba(255,255,255,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 30px -12px rgba(40,25,25,.35);display:grid;place-items:center;cursor:pointer;color:var(--wine);transition:opacity .3s,transform .3s var(--ease)}
+.totop.off{opacity:0;transform:translateY(12px);pointer-events:none}
+.totop svg{width:20px;height:20px}
+@media (min-width:960px){.remind{left:50%;right:auto;transform:translateX(-50%);bottom:24px;width:max-content;max-width:560px}.remind.off{transform:translate(-50%,12px)}.totop{bottom:24px;right:24px}}
+
+/* tab bar */
+.tabbar{position:fixed;left:10px;right:10px;bottom:10px;z-index:50;height:var(--nav-h);border-radius:22px;background:rgba(255,255,255,.72);backdrop-filter:saturate(1.6) blur(20px);-webkit-backdrop-filter:saturate(1.6) blur(20px);border:1px solid var(--glass-line);box-shadow:0 10px 30px -10px rgba(40,35,30,.3);display:grid;grid-template-columns:repeat(5,1fr)}
+.tabbar a{display:grid;justify-items:center;align-content:center;gap:2px;text-decoration:none;color:var(--muted);font-size:11.5px;font-weight:500;border-radius:18px;transition:color .2s}
+.tabbar svg{width:23px;height:23px}
+.tabbar a.active{color:var(--wine)}
+.tabbar a.cta{color:var(--wine)}
+@media (min-width:960px){.tabbar{display:none}}
+body{padding-bottom:0}
+.ico{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* narrow phones: never wider than the screen */
+body{overflow-wrap:break-word}
+.facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+.fact dt,.fact dd,.tl .card,.leg,.hotel{hyphens:auto}
+.tl li{grid-template-columns:74px 22px minmax(0,1fr)}
+.venues{grid-template-columns:minmax(0,1fr)}
+@media (min-width:960px){.venues{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.where{max-width:100%}
+@media (max-width:360px){
+  .venue__card h3{font-size:28px}
+  .venue__card{margin-left:6px;margin-right:6px;padding:20px 16px}
+  .facts{grid-template-columns:1fr}
+  .tl li{grid-template-columns:58px 22px minmax(0,1fr);gap:0 10px}
+  .tl__rail{left:calc(58px + 10px + 10px)}
+  .tl time{font-size:21px}
+}
+
+/* small and landscape phones */
+@media (orientation:portrait) and (max-height:700px){
+  .hero__layout{padding-top:70px;gap:14px;padding-bottom:calc(var(--nav-h) + 44px)}
+  .hero__hint{bottom:calc(var(--nav-h) + 16px)}
+}
+@media (orientation:landscape) and (max-height:560px){
+  :root{--nav-h:52px}
+  .hero__layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:minmax(0,1fr);align-items:center;column-gap:24px;padding:66px var(--gutter) calc(var(--nav-h) + 22px)}
+  .hero__slot{align-self:stretch;justify-self:center}
+  .names{font-size:clamp(34px,10vh,64px)}
+  .hero__date{font-size:19px}
+  .hero__hint{display:none}
+  .tabbar a{gap:0;font-size:11px}
+  .tabbar svg{width:20px;height:20px}
+  .remind,.totop{bottom:calc(var(--nav-h) + 16px)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .after-hero{margin-top:0}
+  .hero{height:auto}
+  .hero__stage{position:relative;height:auto;min-height:100svh}
+  .rv{--r:1!important}
+}
+</style>
+</head>
+<body>
+
+<div class="amb" aria-hidden="true">
+  <img data-k="hero" class="on" src="assets/blur-hero.jpg" alt="">
+  <img data-k="lachen" src="assets/blur-lachen.jpg" alt="">
+  <img data-k="flugzeug" src="assets/blur-flugzeug.jpg" alt="">
+  <img data-k="portrait" src="assets/blur-portrait.jpg" alt="">
+  <img data-k="umarmung" src="assets/blur-umarmung.jpg" alt="">
+  <img data-k="ring" src="assets/blur-ring.jpg" alt="">
+  <img data-k="schloss" src="assets/blur-schloss.jpg" alt="">
+  <img data-k="skyline" src="assets/blur-skyline.jpg" alt="">
+</div>
+
+<header class="top" id="top">
+  <div class="wrap top__in">
+    <a class="mono" href="#start" aria-label="Zum Anfang">T &amp; M</a>
+    <nav class="top__links" aria-label="Abschnitte">
+      <a href="#ablauf">Ablauf</a><a href="#orte">Orte</a><a href="#anreise">Anreise</a><a href="#hotels">Hotels</a><a href="#infos">Gut zu wissen</a><a href="#fotos">Fotos</a>
+    </nav>
+    <div class="top__right">
+      <button type="button" class="fs" id="fs" aria-pressed="false" aria-label="Schrift größer" title="Schrift größer">A+</button>
+      <div class="lang" role="group" aria-label="Sprache / Jezik">
+        <button type="button" data-l="de" aria-pressed="true" title="Deutsch">DE</button>
+        <button type="button" data-l="sr" aria-pressed="false" title="Srpski">SR</button>
+      </div>
+      <a class="btn btn--sm" href="#zusage">Zu- oder absagen</a>
+    </div>
+  </div>
+</header>
+
+<aside class="live" id="live" hidden aria-live="polite">
+  <div class="live__in">
+    <span class="live__dot" id="live-dot" aria-hidden="true"></span>
+    <div class="live__txt"><p class="live__k" id="live-k"></p><p class="live__now" id="live-now"></p><p class="live__next" id="live-next"></p></div>
+    <a class="btn btn--sm" id="live-route" target="_blank" rel="noopener" href="#"><span class="lr-route">Route</span><span class="lr-tips" hidden>Tipps</span></a>
+  </div>
+</aside>
+
+<main>
+  <section class="hero" id="start" aria-label="Einladung">
+    <div class="hero__stage" id="stage">
+      <img class="hero__bg" src="assets/blur-hero.jpg" alt="">
+      <div class="hero__bg-tint"></div>
+      <div class="hero__layout">
+        <div class="hero__text" id="htext">
+          <p class="label">Wir heiraten</p>
+          <h1 class="names">Tamara &amp; Marvin</h1>
+          <p class="hero__date">Samstag, 22. Mai 2027</p>
+          <p class="chip" id="chip">Noch <b>188</b> Tage</p>
+        </div>
+        <div class="hero__slot" id="slot"></div>
+      </div>
+      <div class="hero__photo" id="hphoto">
+        <img class="sharp" id="hsharp" src="assets/hero.jpg" alt="Marvin kniet am Meer auf Korfu und hält um Tamaras Hand an" fetchpriority="high">
+        <img class="soft" id="hsoft" src="assets/blur-hero.jpg" alt="">
+        <div class="hero__shade" id="hshade"></div>
+        <div class="hero__tint2" id="htint"></div>
+        <div class="hero__over" id="hover">
+          <p class="s">Wir sagen Ja</p>
+          <p class="d">Hanau · Frankfurt · 22.05.2027</p>
+        </div>
+      </div>
+      <div class="hero__hint" id="hint" aria-hidden="true"><i></i>Scrollen</div>
+    </div>
+  </section>
+
+  <section class="block after-hero" data-amb="lachen" aria-labelledby="h-intro" style="padding-top:40px">
+    <div class="wrap narrow">
+      <h2 id="h-intro" class="label" style="margin-bottom:18px">Ihr Lieben</h2>
+      <p class="statement" id="statement">Im September hat Tamara auf Korfu Ja gesagt. Am 22. Mai 2027 geben wir uns im Schloss Philippsruhe das Jawort und feiern danach mit euch in Frankfurt-Sachsenhausen, mit Sundowner, Barbecue und Party bis in die Nacht.</p>
+      <p class="sign rv">Tamara &amp; Marvin</p>
+    </div>
+  </section>
+
+  <section class="block" data-amb="lachen" aria-labelledby="h-blick">
+    <div class="wrap">
+      <div class="sechead rv">
+        <p class="label">Auf einen Blick</p>
+        <h2 id="h-blick" class="h2">Das Wichtigste</h2>
+      </div>
+      <div class="count rv" id="count" aria-label="Countdown bis zur Trauung">
+        <div class="glass"><b id="cd-d">188</b><span>Tage</span></div>
+        <div class="glass"><b id="cd-h">00</b><span>Std</span></div>
+        <div class="glass"><b id="cd-m">00</b><span>Min</span></div>
+        <div class="glass"><b id="cd-s">00</b><span>Sek</span></div>
+      </div>
+      <dl class="facts">
+        <div class="fact glass rv"><dt>Datum</dt><dd>Samstag, 22. Mai 2027</dd></div>
+        <div class="fact glass rv"><dt>Treffpunkt</dt><dd>15:30 Uhr<small>Schloss Philippsruhe, Hanau</small></dd></div>
+        <div class="fact glass rv"><dt>Trauung</dt><dd>16:00 Uhr<small>standesamtlich im Schloss</small></dd></div>
+        <div class="fact glass rv"><dt>Feier</dt><dd>ab 18:00 Uhr<small>OutOfOffice, Sachsenhausen</small></dd></div>
+        <div class="fact glass rv"><dt>Dresscode</dt><dd>Schicke Garderobe</dd></div>
+        <div class="fact glass rv"><dt>Rückmeldung</dt><dd>bis 1. März 2027<small><a href="#zusage">Direkt hier auf der Seite</a></small></dd></div>
+      </dl>
+      <div class="cal rv">
+        <span>In den Kalender:</span>
+        <a class="btn btn--ghost btn--sm" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Hochzeit%20Tamara%20%26%20Marvin&amp;dates=20270522T133000Z/20270522T230000Z&amp;location=Schloss%20Philippsruhe%2C%20Philippsruher%20Allee%2045%2C%2063454%20Hanau&amp;details=15%3A30%20Treffen%20am%20Schloss%20Philippsruhe%2C%2016%3A00%20Trauung.%2018%3A00%20Sektempfang%20im%20OutOfOffice%2C%20Geleitsstra%C3%9Fe%2014%2C%20Frankfurt-Sachsenhausen.">Google Kalender</a>
+        <a class="btn btn--ghost btn--sm" target="_blank" rel="noopener" href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Hochzeit%20Tamara%20%26%20Marvin&amp;startdt=2027-05-22T15%3A30%3A00%2B02%3A00&amp;enddt=2027-05-23T01%3A00%3A00%2B02%3A00&amp;location=Schloss%20Philippsruhe%2C%20Philippsruher%20Allee%2045%2C%2063454%20Hanau&amp;body=15%3A30%20Treffen%20am%20Schloss%20Philippsruhe%2C%2016%3A00%20Trauung.%2018%3A00%20Sektempfang%20im%20OutOfOffice%2C%20Geleitsstra%C3%9Fe%2014%2C%20Frankfurt-Sachsenhausen.">Outlook</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="ablauf" data-amb="flugzeug" aria-labelledby="h-ablauf">
+    <div class="wrap narrow">
+      <div class="sechead rv">
+        <p class="label">Samstag, 22. Mai 2027</p>
+        <h2 id="h-ablauf" class="h2">Ablauf des Tages</h2>
+      </div>
+      <div class="tlw" id="tl">
+        <span class="tl__rail" aria-hidden="true"><i></i></span>
+        <ol class="tl">
+        <li class="rv">
+          <time class="num">15:30</time><span class="dot"></span>
+          <div class="card glass"><h3>Treffpunkt am Schloss</h3><p>Wir treffen uns vor dem Schloss Philippsruhe. Plant ein paar Minuten für die Parkplatzsuche ein.</p>
+          <a class="where" href="#orte"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Schloss Philippsruhe</a></div>
+        </li>
+        <li class="rv">
+          <time class="num">16:00</time><span class="dot"></span>
+          <div class="card glass"><h3>Standesamtliche Trauung</h3><p>Der große Moment im Schloss. Im Anschluss ist Zeit für Glückwünsche und Fotos.</p></div>
+        </li>
+        <li class="rv">
+          <time><small>danach</small></time><span class="dot"></span>
+          <div class="card glass"><h3>Gemeinsam weiter nach Sachsenhausen</h3><p>Von Hanau sind es mit dem Auto rund 30 Minuten bis zur Feier.</p>
+          <a class="where" href="#anreise"><svg class="ico" viewBox="0 0 24 24"><path d="M5 17h14M6 17l1.5-6h9L18 17M8 17v2M16 17v2M7.5 11 9 7h6l1.5 4"/></svg>So kommt ihr hin</a></div>
+        </li>
+        <li class="rv">
+          <time class="num">18:00</time><span class="dot"></span>
+          <div class="card glass"><h3>Sektempfang &amp; Sundowner</h3><p>Wir stoßen gemeinsam an, bei gutem Wetter draußen auf der Terrasse.</p>
+          <a class="where" href="#orte"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>OutOfOffice Sachsenhausen</a></div>
+        </li>
+        <li class="rv">
+          <time class="num">19:00</time><span class="dot"></span>
+          <div class="card glass"><h3>Abendessen</h3><p>Barbecue mit allem, was dazugehört.</p></div>
+        </li>
+        <li class="rv">
+          <time class="num">20:00</time><span class="dot"></span>
+          <div class="card glass"><h3>Let's party!</h3><p>Musik, Tanzen und Feiern bis in die Nacht.</p></div>
+        </li>
+        <li class="rv sun">
+          <time class="num"><small>ca.</small>21:10</time><span class="dot"></span>
+          <div class="card glass"><h3>Sonnenuntergang</h3><p>Ein schöner Moment für ein gemeinsames Foto.</p></div>
+        </li>
+        <li class="rv">
+          <time class="num"><small>ab</small>01:00</time><span class="dot"></span>
+          <div class="card glass"><h3>Für Nachteulen</h3><p>Die Feier endet, die Nacht muss es nicht.</p>
+          <a class="where" href="#nachteulen"><svg class="ico" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>Tipps für danach</a></div>
+        </li>
+      </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="orte" aria-labelledby="h-orte">
+    <div class="wrap">
+      <div class="sechead rv">
+        <p class="label">Zwei Orte, ein Tag</p>
+        <h2 id="h-orte" class="h2">Trauung &amp; Feier</h2>
+      </div>
+      <div class="venues">
+        <article class="venue rv" data-amb="schloss">
+          <div class="scene" data-scene>
+            <img data-depth="1" src="assets/schloss.jpg" alt="Schloss Philippsruhe in Hanau mit Springbrunnen und Schlosspark" loading="lazy">
+            <span class="chip scene__label">Standesamt · ab 15:30</span>
+          </div>
+          <div class="venue__card glass">
+            <div>
+              <div class="vk"><p class="label">Hanau</p><p class="when num">16:00 Trauung</p></div>
+              <h3>Schloss Philippsruhe</h3>
+              <address>Philippsruher Allee 45<br>63454 Hanau</address>
+              <button type="button" class="copy" data-copy="Schloss Philippsruhe, Philippsruher Allee 45, 63454 Hanau"><svg class="ico" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span class="c1">Adresse kopieren</span><span class="c2" hidden>Kopiert ✓</span></button>
+            </div>
+            <dl>
+              <div><dt><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M10 16V8h3a2.5 2.5 0 0 1 0 5h-3"/></svg>Parken</dt>
+                <dd><ul><li>Parkplatz direkt vor dem Schloss</li><li>Entlang Philippsruher Allee, Kastanienallee und Burgallee</li><li>Großer Parkplatz am Ende des Schlossparks beim Amphitheater</li></ul></dd></div>
+              <div><dt><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M8 21l2-4M16 21l-2-4"/></svg>Bus &amp; Bahn</dt>
+                <dd>S8 oder S9 bis Hanau Hauptbahnhof, dann Bus 5 bis zur Haltestelle Schloss Philippsruhe. Ab der Innenstadt fährt auch Bus 10.</dd></div>
+            </dl>
+            <div class="btnrow">
+              <a class="btn btn--sm" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Schloss%20Philippsruhe%2C%20Philippsruher%20Allee%2045%2C%2063454%20Hanau">Google Maps</a>
+              <a class="btn btn--ghost btn--sm" target="_blank" rel="noopener" href="https://maps.apple.com/?q=Schloss%20Philippsruhe&amp;address=Philippsruher%20Allee%2045%2C%2063454%20Hanau">Apple Karten</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="venue rv" data-amb="skyline">
+          <div class="scene" data-scene>
+            <img data-depth="1" src="assets/skyline.jpg" alt="Frankfurter Skyline am Main im Abendlicht" loading="lazy">
+            <span class="chip scene__label">Frankfurt · Feier ab 18:00</span>
+          </div>
+          <div class="venue__card glass">
+            <div>
+              <div class="vk"><p class="label">Sachsenhausen</p><p class="when num">18:00 Sektempfang</p></div>
+              <h3>OutOfOffice Sachsenhausen</h3>
+              <address>Geleitsstraße 14<br>60599 Frankfurt am Main</address>
+              <button type="button" class="copy" data-copy="OutOfOffice, Geleitsstraße 14, 60599 Frankfurt am Main"><svg class="ico" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span class="c1">Adresse kopieren</span><span class="c2" hidden>Kopiert ✓</span></button>
+            </div>
+            <dl>
+              <div><dt><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M10 16V8h3a2.5 2.5 0 0 1 0 5h-3"/></svg>Parken</dt>
+                <dd><ul><li>Parkhaus am Henninger Turm mit rund 650 Stellplätzen, wenige Gehminuten entfernt</li><li>Straßenparkplätze rund um Geleitsstraße und Hainer Weg sind knapp</li></ul></dd></div>
+              <div><dt><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M8 21l2-4M16 21l-2-4"/></svg>Bus &amp; Bahn</dt>
+                <dd>S-Bahn S3 bis S6 oder U1, U2, U3, U8 bis Südbahnhof. Weiter mit Bus 47 bis Geleitsstraße oder Bus 48 bis Henninger-Turm. Zu Fuß sind es etwa 15 Minuten.</dd></div>
+              <div><dt><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9.5 10 12 7.5 14.5 10M9.5 14 12 16.5 14.5 14"/></svg>Zugang</dt>
+                <dd>Aufzug im Haus, das letzte Stockwerk zur Dachterrasse nur über eine kleine Treppe</dd></div>
+              <div><dt><svg class="ico" viewBox="0 0 24 24"><path d="M12 3.5l2.5 5.2 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z"/></svg>Extras</dt>
+                <dd><ul><li>Ruhiger Rückzugsort für Kinder</li><li>Tischtennisplatte (nicht für Bierpong 😉)</li><li>Fernseher mit Nintendo Switch: Mario Kart und Mario Party</li></ul></dd></div>
+            </dl>
+            <div class="btnrow">
+              <a class="btn btn--sm" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=OutOfOffice%20Frankfurt%20Sachsenhausen%2C%20Geleitsstra%C3%9Fe%2014%2C%2060599%20Frankfurt%20am%20Main">Google Maps</a>
+              <a class="btn btn--ghost btn--sm" target="_blank" rel="noopener" href="https://maps.apple.com/?q=OutOfOffice%20Frankfurt&amp;address=Geleitsstra%C3%9Fe%2014%2C%2060599%20Frankfurt%20am%20Main">Apple Karten</a>
+              <a class="btn btn--ghost btn--sm" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Parkhaus%20Henninger%20Turm%20Frankfurt">Parkhaus</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="anreise" data-amb="skyline" aria-labelledby="h-anreise">
+    <div class="wrap">
+      <div class="sechead rv">
+        <p class="label">In drei Etappen</p>
+        <h2 id="h-anreise" class="h2">Anreise &amp; Parken</h2>
+        <p class="swipe">Zum Weiterblättern wischen <svg class="ico" width="16" height="16" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+      </div>
+      <figure class="map glass rv">
+        <svg viewBox="0 0 400 228" role="img" aria-label="Übersichtskarte: Hotels an der Messe, Hanau und Sachsenhausen">
+          <path d="M400 116 C362 108 340 140 300 132 S240 108 200 126 S150 150 118 140 S58 116 0 132" fill="none" stroke="#A9C0C6" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+          <text x="236" y="112" class="m-s" font-style="italic">Main</text>
+          <text x="70" y="22" class="m-c" text-anchor="middle">FRANKFURT</text>
+          <text x="322" y="22" class="m-c" text-anchor="middle">HANAU</text>
+          <g fill="none" stroke="var(--wine)" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round">
+            <path d="M70 98 C150 40 250 40 322 96"/>
+            <path d="M322 96 C305 170 230 195 150 172"/>
+            <path d="M150 172 C110 165 75 140 70 98"/>
+          </g>
+          <g font-family="var(--font-body)" font-size="12" font-weight="600" text-anchor="middle">
+            <circle cx="199" cy="54" r="11" fill="var(--olive)"/><text x="199" y="58" fill="#fff">1</text>
+            <circle cx="260" cy="170" r="11" fill="var(--olive)"/><text x="260" y="174" fill="#fff">2</text>
+            <circle cx="97" cy="148" r="11" fill="var(--olive)"/><text x="97" y="152" fill="#fff">3</text>
+          </g>
+          <text x="215" y="58" class="m-s halo">ca. 30 Min.</text>
+          <text x="276" y="174" class="m-s halo">ca. 30 Min.</text>
+          <text x="81" y="152" class="m-s halo" text-anchor="end">ca. 15 Min.</text>
+          <circle cx="70" cy="98" r="7" fill="var(--olive)" stroke="#fff" stroke-width="2"/>
+          <circle cx="322" cy="96" r="7" fill="var(--wine)" stroke="#fff" stroke-width="2"/>
+          <circle cx="150" cy="172" r="7" fill="var(--wine)" stroke="#fff" stroke-width="2"/>
+          <text x="70" y="82" class="m-l halo" text-anchor="middle">Hotels an der Messe</text>
+          <text x="322" y="80" class="m-l halo" text-anchor="middle">Schloss Philippsruhe</text>
+          <text x="322" y="118" class="m-s halo" text-anchor="middle">Trauung</text>
+          <text x="150" y="196" class="m-l halo" text-anchor="middle">OutOfOffice</text>
+          <text x="150" y="211" class="m-s halo" text-anchor="middle">Feier</text>
+        </svg>
+        <figcaption class="map__legend"><span><b>1</b>Hotel → Trauung</span><span><b>2</b>Trauung → Feier</span><span><b>3</b>Feier → Hotel</span></figcaption>
+      </figure>
+      <p class="hint glass rv" style="margin:0 0 16px"><b>Parken:</b> In Hanau direkt vor dem Schloss, in Sachsenhausen im Parkhaus am Henninger Turm. Details und Kartenlinks findet ihr oben bei „Trauung &amp; Feier“.</p>
+      <div class="legs">
+        <article class="leg glass">
+          <p class="leg__n"><b>1</b>bis 15:30</p>
+          <h3>Nach Hanau</h3>
+          <p><b>Auto:</b> Ab Frankfurt-Messe rund 30 Minuten. Ziel ist der Parkplatz vor dem Schloss.</p>
+          <p><b>Bahn:</b> S8 oder S9 bis Hanau Hbf, dann Bus 5. Plant insgesamt etwa eine Stunde ein.</p>
+        </article>
+        <article class="leg glass">
+          <p class="leg__n"><b>2</b>nach der Trauung</p>
+          <h3>Weiter nach Sachsenhausen</h3>
+          <p>Wir fahren gemeinsam vom Schloss zur Feier, mit dem Auto rund 30 Minuten.</p>
+          <p><b>Ohne Auto da?</b> Sagt es uns bei der Rückmeldung, dann finden wir einen Platz für euch.</p>
+        </article>
+        <article class="leg glass">
+          <p class="leg__n"><b>3</b>in der Nacht</p>
+          <h3>Zurück ins Hotel</h3>
+          <p><b>Taxi:</b> Zu den Hotels an der Messe rund 15 Minuten. Teilen lohnt sich.</p>
+          <p><b>S-Bahn:</b> Ab Südbahnhof fahren S3 bis S6 ohne Umsteigen bis Galluswarte und Messe. Nachts fahren sie seltener.</p>
+          <p><b>Mit dem Auto da?</b> Lasst es nach dem Feiern stehen und holt es am Sonntag ab. Prüft vorher die Öffnungszeiten des Parkhauses.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="nachteulen" data-amb="skyline" aria-labelledby="h-owl">
+    <div class="wrap">
+      <div class="sechead rv">
+        <p class="label">Ab 01:00 · Für Nachteulen</p>
+        <h2 id="h-owl" class="h2">Noch nicht müde?</h2>
+        <p class="lead">Frankfurt ist eine Stadt zum Ausgehen. Wer nach unserer Feier noch weiterziehen möchte, hat es von Sachsenhausen aus nicht weit.</p>
+        <p class="swipe">Zum Weiterblättern wischen <svg class="ico" width="16" height="16" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+      </div>
+      <div class="legs">
+        <article class="leg glass owl">
+          <h3>Schweizer Straße</h3>
+          <p class="owl__d"><span class="tag">zu Fuß ca. 15–20 Min.</span><span class="tag">Taxi ca. 5 Min.</span></p>
+          <p>Sachsenhausens Ausgehstraße mit Bars und Lokalen. Etwas ruhiger, gut für einen Absacker.</p>
+          <a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Bars%20Schweizer%20Stra%C3%9Fe%20Frankfurt">Auf der Karte ›</a>
+        </article>
+        <article class="leg glass owl">
+          <h3>Alt-Sachsenhausen</h3>
+          <p class="owl__d"><span class="tag">zu Fuß ca. 15–20 Min.</span><span class="tag">Taxi ca. 5 Min.</span></p>
+          <p>Frankfurts bekanntes Kneipenviertel rund um Klappergasse und Rittergasse. Urig, laut und am Wochenende lange voll.</p>
+          <a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Alt-Sachsenhausen%20Frankfurt">Auf der Karte ›</a>
+        </article>
+        <article class="leg glass owl">
+          <h3>Innenstadt</h3>
+          <p class="owl__d"><span class="tag">Taxi ca. 10 Min.</span></p>
+          <p>Clubs und Cocktailbars rund um Zeil und Hauptwache, nur ein paar Minuten über den Main.</p>
+          <a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Bars%20Clubs%20Zeil%20Hauptwache%20Frankfurt">Auf der Karte ›</a>
+        </article>
+      </div>
+      <p class="hint glass rv">Von allen drei Ecken seid ihr mit dem Taxi in rund 15 Minuten zurück bei den Hotels an der Messe.</p>
+    </div>
+  </section>
+
+  <section class="block" id="hotels" data-amb="umarmung" aria-labelledby="h-hotels">
+    <div class="wrap narrow">
+      <div class="sechead rv">
+        <p class="label">Für alle, die über Nacht bleiben</p>
+        <h2 id="h-hotels" class="h2">Übernachtung</h2>
+        <p class="lead">Die meisten Hotels liegen nebeneinander an der Europa-Allee bei der Messe. Wenn viele von euch dort schlafen, sind wir alle nah beieinander.</p>
+      </div>
+      <div class="seg rv" role="tablist" aria-label="Hotelgegend">
+        <button role="tab" id="t-messe" aria-controls="p-messe" aria-selected="true">An der Messe</button>
+        <button role="tab" id="t-sachs" aria-controls="p-sachs" aria-selected="false">In Sachsenhausen</button>
+      </div>
+
+      <div id="p-messe" role="tabpanel" aria-labelledby="t-messe">
+        <p class="small" style="margin:0 0 10px">Sortiert nach Preis-Leistung. Balken: üblicher Preis pro Zimmer und Nacht.</p>
+        <div class="scale" aria-hidden="true"><span>40 €</span><span>95 €</span><span>150 €</span></div>
+        <ol class="hlist">
+          <li class="hotel glass rv">
+            <span class="hotel__rank">1</span>
+            <div><p class="hotel__name">DORMERO Hotel Frankfurt</p><p class="hotel__addr">Lissabonner Straße 2 · 4 Sterne</p></div>
+            <div class="hotel__body">
+              <p class="hotel__txt">Sauna, Fitnessbereich und Parkplätze am Hotel. Im Preisvergleich trotz vier Sternen meist das günstigste der fünf.</p>
+              <div class="price"><div class="price__row"><span class="price__val">ca. 60–100 €</span><span class="price__note">Frühstück ca. 19 € p. P.</span></div><div class="bar" style="--a:.18;--b:.55"><i></i></div></div>
+              <div class="hotel__meta"><span class="tag tag--top">Preis-Leistungs-Tipp</span><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=DORMERO%20Hotel%20Frankfurt%2C%20Lissabonner%20Stra%C3%9Fe%202">Karte &amp; Buchung ›</a></div>
+            </div>
+          </li>
+          <li class="hotel glass rv">
+            <span class="hotel__rank">2</span>
+            <div><p class="hotel__name">Premier Inn Frankfurt Messe</p><p class="hotel__addr">Europa-Allee 44 · 3 Sterne</p></div>
+            <div class="hotel__body">
+              <p class="hotel__txt">Modern, unkompliziert und bekannt für sehr bequeme Betten. Preislich auf einer Höhe mit dem Dormero.</p>
+              <div class="price"><div class="price__row"><span class="price__val">ca. 55–90 €</span><span class="price__note">Frühstück ca. 18 € p. P.</span></div><div class="bar" style="--a:.14;--b:.45"><i></i></div></div>
+              <div class="hotel__meta"><span class="tag tag--top">Unsere Empfehlung</span><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Premier%20Inn%20Frankfurt%20Messe%2C%20Europa-Allee%2044%2C%20Frankfurt">Karte &amp; Buchung ›</a></div>
+            </div>
+          </li>
+          <li class="hotel glass rv">
+            <span class="hotel__rank">3</span>
+            <div><p class="hotel__name">Hampton by Hilton City Centre Messe</p><p class="hotel__addr">Europa-Allee 46 · 3 Sterne</p></div>
+            <div class="hotel__body">
+              <p class="hotel__txt">Frühstück ist im Preis enthalten. Zu zweit gleicht das den höheren Zimmerpreis fast aus.</p>
+              <div class="price"><div class="price__row"><span class="price__val">ca. 90–130 €</span><span class="price__note">inkl. Frühstück</span></div><div class="bar" style="--a:.45;--b:.82"><i></i></div></div>
+              <div class="hotel__meta"><span class="tag">Frühstück inklusive</span><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Hampton%20by%20Hilton%20Frankfurt%20City%20Centre%20Messe%2C%20Europa-Allee%2046">Karte &amp; Buchung ›</a></div>
+            </div>
+          </li>
+          <li class="hotel glass rv">
+            <span class="hotel__rank">4</span>
+            <div><p class="hotel__name">Capri by Fraser Frankfurt</p><p class="hotel__addr">Europa-Allee 42 · 4 Sterne</p></div>
+            <div class="hotel__body">
+              <p class="hotel__txt">Studios und Apartments mit Küchenzeile, ideal für Familien. Samstags oft günstiger als unter der Woche.</p>
+              <div class="price"><div class="price__row"><span class="price__val">ca. 90–140 €</span><span class="price__note">Frühstück extra</span></div><div class="bar" style="--a:.45;--b:.91"><i></i></div></div>
+              <div class="hotel__meta"><span class="tag">Mit Küche</span><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Capri%20by%20Fraser%20Frankfurt%2C%20Europa-Allee%2042">Karte &amp; Buchung ›</a></div>
+            </div>
+          </li>
+          <li class="hotel glass rv">
+            <span class="hotel__rank">5</span>
+            <div><p class="hotel__name">Motel One Frankfurt-Messe</p><p class="hotel__addr">Europa-Allee 25 · 3 Sterne</p></div>
+            <div class="hotel__body">
+              <p class="hotel__txt">Schickes Design und eine gemütliche Lounge-Bar. Preislich eher Mittelklasse als Budget.</p>
+              <div class="price"><div class="price__row"><span class="price__val">ca. 80–110 €</span><span class="price__note">Frühstück extra</span></div><div class="bar" style="--a:.36;--b:.64"><i></i></div></div>
+              <div class="hotel__meta"><span class="tag">Design &amp; Bar</span><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Motel%20One%20Frankfurt-Messe%2C%20Europa-Allee%2025">Karte &amp; Buchung ›</a></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div id="p-sachs" role="tabpanel" aria-labelledby="t-sachs" hidden>
+        <p class="small" style="margin:0 0 10px">Für alle, die nach der Party in der Nähe der Feier schlafen möchten.</p>
+        <div class="scale" aria-hidden="true"><span>40 €</span><span>95 €</span><span>150 €</span></div>
+        <ul class="hlist">
+          <li class="hotel glass">
+            <span class="hotel__rank">·</span>
+            <div><p class="hotel__name">Hotel am Berg</p><p class="hotel__addr">Grethenweg 23 · 3 Sterne</p></div>
+            <div class="hotel__body">
+              <p class="hotel__txt">Familiengeführt in einer Villa von etwa 1900, gleich um die Ecke der Geleitsstraße. Am nächsten an der Feier.</p>
+              <div class="price"><div class="price__row"><span class="price__val">ca. 60–90 €</span><span class="price__note">Parkplätze am Haus</span></div><div class="bar" style="--a:.18;--b:.45"><i></i></div></div>
+              <div class="hotel__meta"><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel%20am%20Berg%2C%20Grethenweg%2023%2C%20Frankfurt">Karte &amp; Buchung ›</a></div>
+            </div>
+          </li>
+          <li class="hotel glass">
+            <span class="hotel__rank">·</span>
+            <div><p class="hotel__name">Living Hotel Frankfurt</p><p class="hotel__addr">Mailänder Straße 8 · 4 Sterne</p></div>
+            <div class="hotel__body">
+              <p class="hotel__txt">Ruhige Wohnlage in Laufweite zum Henninger Turm. Im Mai eher am oberen Ende der Spanne.</p>
+              <div class="price"><div class="price__row"><span class="price__val">ca. 90–120 €</span><span class="price__note">Frühstück ca. 22 € p. P.</span></div><div class="bar" style="--a:.45;--b:.73"><i></i></div></div>
+              <div class="hotel__meta"><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Living%20Hotel%20Frankfurt%2C%20Mail%C3%A4nder%20Stra%C3%9Fe%208">Karte &amp; Buchung ›</a></div>
+            </div>
+          </li>
+          <li class="hotel glass">
+            <span class="hotel__rank">·</span>
+            <div><p class="hotel__name">The Blasky Hotel &amp; Rooftop</p><p class="hotel__addr">Ziegelhüttenweg 43 · 4 Sterne</p></div>
+            <div class="hotel__body">
+              <p class="hotel__txt">Designhotel mit Dachterrasse und Skyline-Blick. Zimmer für bis zu vier Personen, Tiefgarage im Haus. Zur Feier sind es wenige Minuten mit dem Taxi.</p>
+              <div class="price"><div class="price__row"><span class="price__val">ca. 80–120 €</span><span class="price__note">Frühstück ca. 20 € p. P.</span></div><div class="bar" style="--a:.36;--b:.73"><i></i></div></div>
+              <div class="hotel__meta"><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Blasky%20Hotel%2C%20Ziegelh%C3%BCttenweg%2043%2C%2060598%20Frankfurt">Karte &amp; Buchung ›</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <p class="hint glass rv"><b>Tipp:</b> Die Preise sind übliche Werte aus Preisvergleichen, Stand November 2026. Während großer Messen kostet es rund um die Europa-Allee schnell das Doppelte. Bucht deshalb früh und mit kostenloser Stornierung.</p>
+    </div>
+  </section>
+
+  <section class="block" id="infos" data-amb="portrait" aria-labelledby="h-infos">
+    <div class="wrap narrow">
+      <div class="sechead rv">
+        <p class="label">Fragen &amp; Antworten</p>
+        <h2 id="h-infos" class="h2">Gut zu wissen</h2>
+      </div>
+      <div class="acc">
+        <details class="glass rv" open><summary>Was ziehe ich an?<span class="chev" aria-hidden="true">+</span></summary>
+          <div class="body"><p><b>Schicke Garderobe.</b></p><p>Ein Teil des Abends findet auf der Dachterrasse statt. Nehmt für später eine leichte Jacke oder ein Tuch mit. Mit Blockabsätzen läuft es sich im Schlosspark und auf der Terrasse leichter.</p></div></details>
+        <details class="glass rv"><summary>Was gibt es zu essen?<span class="chev" aria-hidden="true">+</span></summary>
+          <div class="body"><p>Es gibt Barbecue. Wenn ihr vegetarisch oder vegan esst oder eine Allergie habt, gebt es einfach im Antwortformular an.</p></div></details>
+        <details class="glass rv"><summary>Wo parke ich?<span class="chev" aria-hidden="true">+</span></summary>
+          <div class="body"><p><b>Hanau:</b> direkt vor dem Schloss oder in den Alleen rundherum.</p><p><b>Sachsenhausen:</b> im Parkhaus am Henninger Turm, wenige Gehminuten von der Feier.</p></div></details>
+        <details class="glass rv"><summary>Ist die Feier barrierefrei?<span class="chev" aria-hidden="true">+</span></summary>
+          <div class="body"><p>Bei der Feier gibt es einen Aufzug. Das letzte Stockwerk mit der Dachterrasse erreicht ihr allerdings nur über eine kleine Treppe. Wenn ihr dabei Hilfe braucht, sagt uns einfach vorher Bescheid.</p></div></details>
+        <details class="glass rv"><summary>Bis wann muss ich Bescheid geben?<span class="chev" aria-hidden="true">+</span></summary>
+          <div class="body"><p>Bitte bis zum 1. März 2027, am einfachsten über das Antwortformular weiter unten.</p></div></details>
+        <details class="glass rv"><summary>Dürfen Kinder mitkommen?<span class="chev" aria-hidden="true">+</span></summary>
+          <div class="body"><p>Ja, Kinder sind herzlich willkommen! Bei der Feier gibt es einen ruhigen Rückzugsort, an dem sie sich ausruhen können. Zählt sie bei der Rückmeldung einfach bei den Personen mit.</p></div></details>
+        <details class="glass rv"><summary>Was gibt es neben der Tanzfläche?<span class="chev" aria-hidden="true">+</span></summary>
+          <div class="body"><p>Eine Tischtennisplatte (nicht für Bierpong 😉) und einen Fernseher mit Nintendo Switch für Mario Kart und Mario Party. Fordert euch gegenseitig heraus!</p></div></details>
+        <details class="glass rv"><summary>Darf ich während der Trauung fotografieren?<span class="chev" aria-hidden="true">+</span></summary>
+          <div class="body"><p>Während der Trauung schaltet euer Handy bitte auf lautlos und genießt den Moment mit uns. Danach freuen wir uns über jedes Foto.</p></div></details>
+        <details class="glass rv"><summary>Ich habe noch eine Frage<span class="chev" aria-hidden="true">+</span></summary>
+          <div class="body"><p>Schreibt uns einfach direkt. Wir freuen uns über jede Nachricht.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="zusage" data-amb="ring" aria-labelledby="h-zusage">
+    <div class="wrap narrow">
+      <div class="sechead rv">
+        <p class="label">Rückmeldung · bis 1. März 2027</p>
+        <h2 id="h-zusage" class="h2">Seid ihr dabei?</h2>
+        <p class="lead">Füllt das Formular aus. Mit einem Tipp ist eure Antwort bei uns.</p>
+      </div>
+      <div class="answered glass" id="answered" hidden>
+        <div class="answered__check" aria-hidden="true">✓</div>
+        <p class="answered__t">Ihr habt schon geantwortet</p>
+        <p class="answered__d" id="answered-d"></p>
+        <div class="answered__more">
+          <p class="small">Etwas hat sich geändert? Schickt einfach eine neue Antwort, wir zählen die neueste.</p>
+          <button type="button" class="btn btn--ghost btn--sm" id="answered-edit">Antwort ändern</button>
+        </div>
+      </div>
+      <form class="rsvp glass rv" id="rsvp" novalidate>
+        <div class="field">
+          <label for="f-name">Euer Name</label>
+          <input type="text" id="f-name" name="name" autocomplete="name" placeholder="z. B. Anna &amp; Jonas Müller">
+          <p class="err" id="e-name" hidden>Bitte tragt euren Namen ein.</p>
+        </div>
+        <div class="field">
+          <p class="flabel" id="l-come">Kommt ihr?</p>
+          <div class="choice" role="radiogroup" aria-labelledby="l-come">
+            <input type="radio" id="f-yes" name="come" value="ja"><label for="f-yes">Wir sind dabei<small>Wir freuen uns!</small></label>
+            <input type="radio" id="f-no" name="come" value="nein"><label for="f-no">Leider nicht<small>Wir denken an euch</small></label>
+          </div>
+          <p class="err" id="e-come" hidden>Bitte wählt aus, ob ihr kommt.</p>
+        </div>
+        <div class="field yesonly">
+          <p class="flabel" id="l-count">Wie viele Personen?</p>
+          <div class="stepper" aria-labelledby="l-count">
+            <button type="button" id="f-minus" aria-label="Eine Person weniger">−</button>
+            <output id="f-count" aria-live="polite">1</output>
+            <button type="button" id="f-plus" aria-label="Eine Person mehr">+</button>
+          </div>
+        </div>
+        <div class="field yesonly">
+          <p class="flabel">Wobei seid ihr dabei?</p>
+          <div class="chips">
+            <span><input type="checkbox" id="f-trauung" name="teil" value="Trauung in Hanau" checked><label for="f-trauung">Trauung in Hanau</label></span>
+            <span><input type="checkbox" id="f-feier" name="teil" value="Feier in Sachsenhausen" checked><label for="f-feier">Feier in Sachsenhausen</label></span>
+          </div>
+        </div>
+        <div class="field yesonly">
+          <p class="flabel">Essenswünsche</p>
+          <div class="chips">
+            <span><input type="checkbox" id="f-veg" name="essen" value="vegetarisch"><label for="f-veg">Vegetarisch</label></span>
+            <span><input type="checkbox" id="f-vegan" name="essen" value="vegan"><label for="f-vegan">Vegan</label></span>
+            <span><input type="checkbox" id="f-allerg" name="essen" value="Allergie"><label for="f-allerg">Allergie / Unverträglichkeit</label></span>
+          </div>
+          <input type="text" id="f-allergie" name="allergie" placeholder="Welche? (optional)" aria-label="Allergien oder Unverträglichkeiten">
+        </div>
+        <div class="field yesonly">
+          <p class="flabel">Sonst noch was?</p>
+          <div class="chips">
+            <span><input type="checkbox" id="f-hotel" name="extra" value="Wir übernachten in Frankfurt"><label for="f-hotel">Wir übernachten in Frankfurt</label></span>
+            <span><input type="checkbox" id="f-ride" name="extra" value="Wir brauchen eine Mitfahrgelegenheit von Hanau nach Sachsenhausen"><label for="f-ride">Wir brauchen eine Mitfahrgelegenheit</label></span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-msg">Nachricht an uns <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+          <textarea id="f-msg" name="msg" placeholder="Ein paar liebe Worte, eine Frage, ein Liedwunsch …"></textarea>
+        </div>
+        <button class="btn" type="submit" style="width:100%">Antwort vorbereiten</button>
+        <div class="result" id="result" hidden aria-live="polite">
+          <h3>Fast geschafft</h3>
+          <p id="result-txt">Eure Antwort ist fertig. Schickt sie uns jetzt mit einem Tipp. Erst dann ist sie bei uns angekommen.</p>
+          <pre id="msg"></pre>
+          <div class="btnrow">
+            <a class="btn btn--sea" id="send-rsvp" target="_blank" rel="noopener" href="#" hidden>Antwort jetzt absenden</a>
+            <a class="btn btn--sea" id="send-wa" target="_blank" rel="noopener" href="#">Per WhatsApp senden</a>
+            <a class="btn btn--ghost" id="send-mail" target="_blank" rel="noopener" href="#" hidden>Per E-Mail senden</a>
+            <button class="btn btn--ghost" type="button" id="copy">Text kopieren</button>
+          </div>
+          <p class="small" id="mail-note" hidden></p>
+          <p class="small" id="copy-note" hidden></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="hs" id="fotos" data-amb="hero" aria-labelledby="h-fotos">
+    <div class="hs__stage">
+      <div class="wrap sechead" style="margin-bottom:0">
+        <p class="label">Korfu, September 2026</p>
+        <h2 id="h-fotos" class="h2">Sie hat Ja gesagt</h2>
+      </div>
+      <div class="hs__track" id="track">
+        <button type="button" data-i="0"><img src="assets/hero.jpg" alt="Marvin kniet vor Tamara am Meer" loading="lazy"></button>
+        <button type="button" data-i="1"><img src="assets/lachen.jpg" alt="Tamara lacht, Marvin hält ihre Hand" loading="lazy"></button>
+        <button type="button" data-i="2"><img src="assets/ring.jpg" alt="Der Verlobungsring an Tamaras Hand" loading="lazy"></button>
+        <button type="button" data-i="3"><img src="assets/flugzeug.jpg" alt="Umarmung, hinter ihnen landet ein Flugzeug" loading="lazy"></button>
+        <button type="button" data-i="4"><img src="assets/umarmung.jpg" alt="Tamara und Marvin umarmen sich am Meer" loading="lazy"></button>
+        <button type="button" data-i="5"><img src="assets/portrait.jpg" alt="Marvin umarmt Tamara von hinten, der Ring ist zu sehen" loading="lazy"></button>
+      </div>
+      <div class="hs__bar" id="hsbar"><i></i></div>
+    </div>
+  </section>
+</main>
+
+<footer data-amb="hero">
+  <div class="wrap" style="display:grid;gap:14px;justify-items:center">
+    <svg class="skyline" viewBox="0 0 600 150" role="img" aria-label="Skizze der Frankfurter Skyline">
+      <g style="fill:rgba(244,240,232,.9)" stroke="#6E1E2F" stroke-width="1.1" stroke-linejoin="round">
+        <rect x="18" y="104" width="30" height="26"/><rect x="50" y="94" width="22" height="36"/>
+        <rect x="86" y="58" width="12" height="72"/><rect x="79" y="36" width="26" height="24" rx="5"/><path d="M92 36V20"/>
+        <rect x="114" y="90" width="26" height="40"/><rect x="142" y="76" width="18" height="54"/>
+        <rect x="170" y="72" width="20" height="58"/><path d="M170 72 180 40 190 72Z"/><path d="M180 40v-8"/>
+        <rect x="196" y="86" width="24" height="44"/>
+        <rect x="228" y="40" width="26" height="90" rx="3"/><path d="M241 40V14"/>
+        <rect x="260" y="24" width="30" height="106"/><path d="M260 52h30M260 84h30M275 24V6"/>
+        <rect x="296" y="48" width="20" height="82"/>
+        <rect x="322" y="70" width="22" height="60"/><rect x="346" y="94" width="30" height="36"/>
+        <rect x="380" y="42" width="24" height="88"/><path d="M380 42 392 22 404 42Z"/><path d="M392 22v-7"/>
+        <rect x="410" y="54" width="22" height="76"/><path d="M410 54l11-8 11 8"/>
+        <rect x="438" y="92" width="26" height="38"/><rect x="468" y="102" width="18" height="28"/>
+        <rect x="490" y="86" width="30" height="44"/><rect x="524" y="100" width="24" height="30"/><rect x="552" y="108" width="30" height="22"/>
+      </g>
+      <path d="M8 130h584" stroke="#6E1E2F" stroke-width="1.1"/>
+      <path d="M40 138c20-3 40 3 60 0s40-3 60 0 40 3 60 0 40-3 60 0 40 3 60 0 40-3 60 0 40 3 60 0 40-3 60 0" fill="none" stroke="#6E1E2F" stroke-width=".8" opacity=".5"/>
+    </svg>
+    <a class="mono" href="#start">T &amp; M</a>
+    <p class="label">22 · 05 · 2027</p>
+    <p>Wir freuen uns sehr auf euch!</p>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="Schnellnavigation">
+  <a href="#ablauf"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Ablauf</a>
+  <a href="#orte"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Orte</a>
+  <a href="#hotels"><svg class="ico" viewBox="0 0 24 24"><path d="M3 18V6M3 14h18v4M21 14v-1.5A3.5 3.5 0 0 0 17.5 9H11v5"/><circle cx="7" cy="11" r="1.8"/></svg>Hotels</a>
+  <a href="#infos"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.8v.1"/></svg>Infos</a>
+  <a href="#zusage" class="cta"><svg class="ico" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>Zusage</a>
+</nav>
+
+<div class="remind off" id="remind" role="status">
+  <p>Bitte antwortet bis 1. März 2027.</p>
+  <a href="#zusage">Antworten ›</a>
+  <button type="button" id="remind-x" aria-label="Hinweis schließen">×</button>
+</div>
+<button type="button" class="totop off" id="totop" aria-label="Nach oben"><svg class="ico" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+<dialog class="lb" id="lb" aria-label="Foto vergrößert">
+  <div class="lb__in" id="lb-in"><img id="lb-img" alt=""></div>
+  <button class="lb__btn lb__close" type="button" id="lb-close" aria-label="Schließen">×</button>
+  <button class="lb__btn lb__prev" type="button" id="lb-prev" aria-label="Vorheriges Foto">‹</button>
+  <button class="lb__btn lb__next" type="button" id="lb-next" aria-label="Nächstes Foto">›</button>
+</dialog>
+
+<script>
+/* ===== Rückmeldungen =====
+   rsvpUrl:  Web-App-Adresse aus Google Apps Script (endet auf /exec). Gesetzt, landen alle
+             Antworten automatisch in eurer Google-Tabelle.
+   whatsapp: Ersatzweg, solange rsvpUrl leer ist. Nummer international ohne + und Leerzeichen,
+             z. B. "4917612345678". Leer gelassen, wählt der Gast euch selbst als Kontakt aus.
+   email:    optional */
+const KONTAKT = { rsvpUrl: "", whatsapp: "", email: "" };
+
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = (s, r=document) => r.querySelector(s);
+  const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+  const clamp = (v, a=0, b=1) => Math.min(b, Math.max(a, v));
+  const ease = t => t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+  const NS = 'http://www.w3.org/2000/svg';
+  const mk = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+  const rnd = s => () => (s = (s * 16807) % 2147483647) / 2147483647;
+
+  /* ---------- Sprache / Jezik ---------- */
+  const TX = {"Hochzeit Tamara & Marvin":"Vjenčanje Tamare i Marvina","Ablauf":"Program","Orte":"Mjesta","Anreise":"Dolazak","Hotels":"Hoteli","Gut zu wissen":"Dobro je znati","Fotos":"Fotografije","Zu- oder absagen":"Potvrdi dolazak","Route":"Ruta","Infos":"Info","Zusage":"Potvrda","Wir heiraten":"Vjenčavamo se","Samstag, 22. Mai 2027":"Subota, 22. maj 2027.","Tage":"dana","Std":"sati","Wir sagen Ja":"Kažemo da","Scrollen":"Listajte","Ihr Lieben":"Dragi naši","Auf einen Blick":"Ukratko","Das Wichtigste":"Najvažnije","Treffpunkt":"Okupljanje","15:30 Uhr":"15:30 h","Trauung":"Vjenčanje","16:00 Uhr":"16:00 h","standesamtlich im Schloss":"građansko, u dvorcu","Feier":"Proslava","ab 18:00 Uhr":"od 18:00 h","Dresscode":"Dress code","Elegante Abendgarderobe":"Elegantna večernja garderoba","Rückmeldung":"Potvrda dolaska","bis 1. März 2027":"do 1. marta 2027.","Direkt hier auf der Seite":"Direktno ovdje na stranici","In den Kalender:":"U kalendar:","Google Kalender":"Google kalendar","Ablauf des Tages":"Program dana","Ankommen in Hanau":"Dolazak u Hanau","Wir treffen uns vor dem Schloss Philippsruhe. Plant ein paar Minuten für die Parkplatzsuche ein.":"Nalazimo se ispred dvorca Philippsruhe. Računajte na nekoliko minuta za traženje parkinga.","Standesamtliche Trauung":"Građansko vjenčanje","Der große Moment im Schloss. Im Anschluss ist Zeit für Glückwünsche und Fotos.":"Veliki trenutak u dvorcu. Nakon toga ima vremena za čestitke i fotografije.","danach":"zatim","Gemeinsam weiter nach Sachsenhausen":"Zajedno dalje u Sachsenhausen","Von Hanau sind es mit dem Auto rund 30 Minuten bis zur Feier.":"Od Hanaua do proslave ima oko 30 minuta vožnje autom.","So kommt ihr hin":"Kako stići","Sektempfang & Sundowner":"Doček uz pjenušac i zalazak sunca","Wir stoßen gemeinsam an, bei gutem Wetter draußen auf der Terrasse.":"Zajedno nazdravljamo, po lijepom vremenu napolju na terasi.","Abendessen":"Večera","Barbecue mit allem, was dazugehört.":"Roštilj sa svim što uz njega ide.","ca.":"oko","Sonnenuntergang":"Zalazak sunca","Ein schöner Moment für ein gemeinsames Foto.":"Lijep trenutak za zajedničku fotografiju.","bis":"do","Party":"Žurka","Musik, Tanzen und Feiern bis in die Nacht.":"Muzika, ples i slavlje do duboko u noć.","Zwei Orte, ein Tag":"Dva mjesta, jedan dan","Trauung & Feier":"Vjenčanje i proslava","Standesamt · ab 15:30":"Vjenčanje · od 15:30","16:00 Trauung":"16:00 vjenčanje","Parken":"Parking","Parkplatz direkt vor dem Schloss":"Parking direktno ispred dvorca","Entlang Philippsruher Allee, Kastanienallee und Burgallee":"Duž ulica Philippsruher Allee, Kastanienallee i Burgallee","Großer Parkplatz am Ende des Schlossparks beim Amphitheater":"Veliki parking na kraju dvorskog parka, kod amfiteatra","Bus & Bahn":"Autobus i voz","S8 oder S9 bis Hanau Hauptbahnhof, dann Bus 5 bis zur Haltestelle Schloss Philippsruhe. Ab der Innenstadt fährt auch Bus 10.":"Gradskim vozom S8 ili S9 do glavne stanice Hanau Hauptbahnhof, zatim autobusom 5 do stanice Schloss Philippsruhe. Iz centra grada vozi i autobus 10.","Apple Karten":"Apple mape","Frankfurt · Feier ab 18:00":"Frankfurt · proslava od 18:00","bis 01:00":"do 01:00","Parkhaus am Henninger Turm mit rund 650 Stellplätzen, wenige Gehminuten entfernt":"Garaža kod Henninger Turma sa oko 650 mjesta, nekoliko minuta hoda","Straßenparkplätze rund um Geleitsstraße und Hainer Weg sind knapp":"Mjesta za parkiranje na ulici oko Geleitsstraße i Hainer Wega ima malo","S-Bahn S3 bis S6 oder U1, U2, U3, U8 bis Südbahnhof. Weiter mit Bus 47 bis Geleitsstraße oder Bus 48 bis Henninger-Turm. Zu Fuß sind es etwa 15 Minuten.":"Gradskim vozom S3 do S6 ili metroom U1, U2, U3, U8 do stanice Südbahnhof. Dalje autobusom 47 do stanice Geleitsstraße ili autobusom 48 do stanice Henninger-Turm. Pješice je oko 15 minuta.","Parkhaus":"Garaža","In drei Etappen":"U tri etape","Hin & zurück":"Tamo i nazad","Zum Weiterblättern wischen":"Prevucite za dalje","bis 15:30":"do 15:30","Nach Hanau":"Do Hanaua","Auto:":"Autom:","Ab Frankfurt-Messe rund 30 Minuten. Ziel ist der Parkplatz vor dem Schloss.":"Od Frankfurt-Messe oko 30 minuta. Cilj je parking ispred dvorca.","Bahn:":"Vozom:","S8 oder S9 bis Hanau Hbf, dann Bus 5. Plant insgesamt etwa eine Stunde ein.":"S8 ili S9 do Hanau Hbf, zatim autobus 5. Računajte ukupno oko sat vremena.","nach der Trauung":"nakon vjenčanja","Weiter nach Sachsenhausen":"Dalje u Sachsenhausen","Wir fahren gemeinsam vom Schloss zur Feier, mit dem Auto rund 30 Minuten.":"Od dvorca zajedno idemo na proslavu, autom oko 30 minuta.","Ohne Auto da?":"Niste autom?","Sagt es uns bei der Rückmeldung, dann finden wir einen Platz für euch.":"Javite nam pri potvrdi dolaska, pa ćemo vam naći mjesto u nekom autu.","in der Nacht":"u noći","Zurück ins Hotel":"Povratak u hotel","Taxi:":"Taksi:","Zu den Hotels an der Messe rund 15 Minuten. Teilen lohnt sich.":"Do hotela kod sajma oko 15 minuta. Isplati se podijeliti taksi.","S-Bahn:":"Gradski voz:","Ab Südbahnhof fahren S3 bis S6 ohne Umsteigen bis Galluswarte und Messe. Nachts fahren sie seltener.":"Sa stanice Südbahnhof S3 do S6 voze bez presjedanja do Galluswarte i Messe. Noću voze rjeđe.","Mit dem Auto da?":"Došli ste autom?","Lasst es nach dem Feiern stehen und holt es am Sonntag ab. Prüft vorher die Öffnungszeiten des Parkhauses.":"Ostavite ga poslije slavlja i pokupite u nedjelju. Prije toga provjerite radno vrijeme garaže.","Für alle, die über Nacht bleiben":"Za sve koji ostaju preko noći","Übernachten":"Smještaj","Die meisten Hotels liegen nebeneinander an der Europa-Allee bei der Messe. Wenn viele von euch dort schlafen, sind wir alle nah beieinander.":"Većina hotela nalazi se jedan do drugog u ulici Europa-Allee kod sajma. Ako mnogi od vas tamo prespavaju, svi ćemo biti blizu jedni drugima.","An der Messe":"Kod sajma","In Sachsenhausen":"U Sachsenhausenu","Sortiert nach Preis-Leistung. Balken: üblicher Preis pro Zimmer und Nacht.":"Poredano po odnosu cijene i kvaliteta. Traka: uobičajena cijena po sobi i noćenju.","Lissabonner Straße 2 · 4 Sterne":"Lissabonner Straße 2 · 4 zvjezdice","Sauna, Fitnessbereich und Parkplätze am Hotel. Im Preisvergleich trotz vier Sternen meist das günstigste der fünf.":"Sauna, teretana i parking kod hotela. Uprkos četiri zvjezdice, pri poređenju cijena najčešće najpovoljniji od ovih pet.","ca. 60–100 €":"oko 60–100 €","Frühstück ca. 19 € p. P.":"Doručak oko 19 € po osobi","Preis-Leistungs-Tipp":"Najbolji odnos cijene i kvaliteta","Karte & Buchung ›":"Mapa i rezervacija ›","Europa-Allee 44 · 3 Sterne":"Europa-Allee 44 · 3 zvjezdice","Modern, unkompliziert und bekannt für sehr bequeme Betten. Preislich auf einer Höhe mit dem Dormero.":"Moderan, jednostavan i poznat po vrlo udobnim krevetima. Cijenom u rangu Dormera.","ca. 55–90 €":"oko 55–90 €","Frühstück ca. 18 € p. P.":"Doručak oko 18 € po osobi","Günstig":"Povoljno","Europa-Allee 46 · 3 Sterne":"Europa-Allee 46 · 3 zvjezdice","Frühstück ist im Preis enthalten. Zu zweit gleicht das den höheren Zimmerpreis fast aus.":"Doručak je uračunat u cijenu. Za dvoje to skoro nadoknađuje višu cijenu sobe.","ca. 90–130 €":"oko 90–130 €","inkl. Frühstück":"uklj. doručak","Frühstück inklusive":"Doručak uključen","Europa-Allee 42 · 4 Sterne":"Europa-Allee 42 · 4 zvjezdice","Studios und Apartments mit Küchenzeile, ideal für Familien. Samstags oft günstiger als unter der Woche.":"Studiji i apartmani sa čajnom kuhinjom, idealni za porodice. Subotom često povoljniji nego radnim danima.","ca. 90–140 €":"oko 90–140 €","Frühstück extra":"Doručak se plaća posebno","Mit Küche":"Sa kuhinjom","Europa-Allee 25 · 3 Sterne":"Europa-Allee 25 · 3 zvjezdice","Schickes Design und eine gemütliche Lounge-Bar. Preislich eher Mittelklasse als Budget.":"Moderan dizajn i ugodan lounge bar. Cijenom više srednja klasa nego budžet.","ca. 80–110 €":"oko 80–110 €","Design & Bar":"Dizajn i bar","Für alle, die nach der Party nur ein paar Schritte gehen möchten.":"Za sve koji poslije žurke žele samo nekoliko koraka do kreveta.","Grethenweg 23 · 3 Sterne":"Grethenweg 23 · 3 zvjezdice","Familiengeführt in einer Villa von etwa 1900, gleich um die Ecke der Geleitsstraße. Am nächsten an der Feier.":"Porodični hotel u vili iz oko 1900. godine, odmah iza ugla Geleitsstraße. Najbliži proslavi.","ca. 60–90 €":"oko 60–90 €","Parkplätze am Haus":"Parking kod hotela","Am nächsten dran":"Najbliže proslavi","Mailänder Straße 8 · 4 Sterne":"Mailänder Straße 8 · 4 zvjezdice","Ruhige Wohnlage in Laufweite zum Henninger Turm, sehr gut bewertet. Im Mai eher am oberen Ende der Spanne.":"Mirna stambena četvrt na pješačkoj udaljenosti od Henninger Turma, odlično ocijenjen. U maju je cijena bliže gornjoj granici.","ca. 90–120 €":"oko 90–120 €","Frühstück ca. 22 € p. P.":"Doručak oko 22 € po osobi","Sehr gut bewertet":"Odlično ocijenjen","Tipp:":"Savjet:","Die Preise sind übliche Werte aus Preisvergleichen, Stand November 2026. Während großer Messen kostet es rund um die Europa-Allee schnell das Doppelte. Bucht deshalb früh und mit kostenloser Stornierung.":"Cijene su uobičajene vrijednosti sa sajtova za poređenje cijena, stanje novembar 2026. Za vrijeme velikih sajmova hoteli oko Europa-Allee brzo koštaju duplo. Zato rezervišite rano i sa besplatnim otkazivanjem.","Fragen & Antworten":"Pitanja i odgovori","Was ziehe ich an?":"Šta da obučem?","Elegante Abendgarderobe.":"Elegantna večernja garderoba.","Ein Teil des Abends findet auf der Dachterrasse statt. Nehmt für später eine leichte Jacke oder ein Tuch mit. Mit Blockabsätzen läuft es sich im Schlosspark und auf der Terrasse leichter.":"Dio večeri provodimo na krovnoj terasi. Ponesite laganu jaknu ili šal za kasnije. Sa širom potpeticom lakše se hoda po dvorskom parku i terasi.","Was wünscht ihr euch?":"Šta biste željeli na poklon?","Eure Anwesenheit ist das schönste Geschenk. Eine kleine Spende für unsere gemeinsame Zukunft freut uns sehr.":"Vaše prisustvo je najljepši poklon. Mali prilog za našu zajedničku budućnost mnogo će nas obradovati.","Was gibt es zu essen?":"Šta će biti za jelo?","Es gibt Barbecue. Wenn ihr vegetarisch oder vegan esst oder eine Allergie habt, gebt es einfach im Antwortformular an.":"Biće roštilja. Ako ste vegetarijanci ili vegani ili imate alergiju, samo to navedite u obrascu za odgovor.","Wo parke ich?":"Gdje da parkiram?","direkt vor dem Schloss oder in den Alleen rundherum.":"direktno ispred dvorca ili u alejama okolo.","im Parkhaus am Henninger Turm, wenige Gehminuten von der Feier.":"u garaži kod Henninger Turma, nekoliko minuta hoda od proslave.","Bis wann muss ich Bescheid geben?":"Do kada treba da javim?","Bitte bis zum 1. März 2027, am einfachsten über das Antwortformular weiter unten.":"Molimo do 1. marta 2027, najlakše putem obrasca za odgovor ispod.","Dürfen Kinder mitkommen?":"Mogu li djeca da dođu?","Ja, Kinder sind herzlich willkommen! Zählt sie bei der Rückmeldung einfach bei den Personen mit.":"Da, djeca su srdačno dobrodošla! Samo ih uračunajte u broj osoba pri potvrdi dolaska.","Darf ich eine Begleitung mitbringen?":"Mogu li da povedem pratnju?","Wir feiern im kleinen Kreis. Eingeladen sind alle, die auf der Einladung stehen. Danke für euer Verständnis!":"Slavimo u užem krugu. Pozvani su svi koji su navedeni na pozivnici. Hvala na razumijevanju!","Darf ich während der Trauung fotografieren?":"Smijem li da fotografišem tokom vjenčanja?","Während der Trauung schaltet euer Handy bitte auf lautlos und genießt den Moment mit uns. Danach freuen wir uns über jedes Foto.":"Tokom vjenčanja molimo vas da utišate telefon i uživate u trenutku s nama. Poslije se radujemo svakoj fotografiji.","Ich habe noch eine Frage":"Imam još jedno pitanje","Schreibt uns einfach direkt. Wir freuen uns über jede Nachricht.":"Samo nam pišite direktno. Radujemo se svakoj poruci.","Bitte bis 1. März 2027":"Molimo do 1. marta 2027.","Seid ihr dabei?":"Dolazite li?","Füllt das Formular aus. Mit einem Tipp ist eure Antwort bei uns.":"Popunite obrazac. Jednim dodirom vaš odgovor stiže do nas.","Euer Name":"Vaše ime","Bitte tragt euren Namen ein.":"Molimo upišite svoje ime.","Kommt ihr?":"Da li dolazite?","Wir sind dabei":"Dolazimo","Wir freuen uns!":"Radujemo se!","Leider nicht":"Nažalost ne","Wir denken an euch":"Mislimo na vas","Bitte wählt aus, ob ihr kommt.":"Molimo izaberite da li dolazite.","Wie viele Personen?":"Koliko osoba?","Wobei seid ihr dabei?":"Gdje ćete biti s nama?","Trauung in Hanau":"Vjenčanje u Hanauu","Feier in Sachsenhausen":"Proslava u Sachsenhausenu","Essenswünsche":"Ishrana","Vegetarisch":"Vegetarijanski","Vegan":"Veganski","Allergie / Unverträglichkeit":"Alergija / netolerancija","Sonst noch was?":"Još nešto?","Wir übernachten in Frankfurt":"Noćimo u Frankfurtu","Wir brauchen eine Mitfahrgelegenheit":"Treba nam prevoz","Nachricht an uns":"Poruka za nas","(optional)":"(opciono)","Antwort vorbereiten":"Pripremi odgovor","Fast geschafft":"Skoro gotovo","Eure Antwort ist fertig. Schickt sie uns jetzt mit einem Tipp. Erst dann ist sie bei uns angekommen.":"Vaš odgovor je spreman. Pošaljite nam ga sada jednim dodirom. Tek tada stiže do nas.","Antwort jetzt absenden":"Pošalji odgovor","Per WhatsApp senden":"Pošalji preko WhatsAppa","Per E-Mail senden":"Pošalji e-mailom","Text kopieren":"Kopiraj tekst","Korfu, September 2026":"Krf, septembar 2026.","Sie hat Ja gesagt":"Rekla je da","Wir freuen uns sehr auf euch!":"Jedva čekamo da slavimo s vama!","Zum Anfang":"Na početak","Abschnitte":"Sekcije","Einladung":"Pozivnica","Marvin kniet am Meer auf Korfu und hält um Tamaras Hand an":"Marvin kleči kraj mora na Krfu i prosi Tamaru","Countdown bis zur Trauung":"Odbrojavanje do vjenčanja","Schloss Philippsruhe in Hanau mit Springbrunnen und Schlosspark":"Dvorac Philippsruhe u Hanauu sa fontanom i parkom","Frankfurter Skyline am Main im Abendlicht":"Panorama Frankfurta na rijeci Majni u večernjem svjetlu","Hotelgegend":"Dio grada","z. B. Anna & Jonas Müller":"npr. Ana i Marko Petrović","Eine Person weniger":"Jedna osoba manje","Eine Person mehr":"Jedna osoba više","Welche? (optional)":"Koja? (opciono)","Allergien oder Unverträglichkeiten":"Alergije ili netolerancije","Ein paar liebe Worte, eine Frage, ein Liedwunsch …":"Nekoliko lijepih riječi, pitanje, želja za pjesmu …","Marvin kniet vor Tamara am Meer":"Marvin kleči pred Tamarom kraj mora","Tamara lacht, Marvin hält ihre Hand":"Tamara se smije, Marvin je drži za ruku","Der Verlobungsring an Tamaras Hand":"Vjerenički prsten na Tamarinoj ruci","Umarmung, hinter ihnen landet ein Flugzeug":"Zagrljaj, iza njih slijeće avion","Tamara und Marvin umarmen sich am Meer":"Tamara i Marvin se grle kraj mora","Marvin umarmt Tamara von hinten, der Ring ist zu sehen":"Marvin grli Tamaru otpozadi, vidi se prsten","Skizze der Frankfurter Skyline":"Skica panorame Frankfurta","Schnellnavigation":"Brza navigacija","Foto vergrößert":"Uvećana fotografija","Schließen":"Zatvori","Vorheriges Foto":"Prethodna fotografija","Nächstes Foto":"Sljedeća fotografija","__statement":"U septembru je Tamara na Krfu rekla da. 22. maja 2027. u dvorcu Philippsruhe reći ćemo jedno drugom sudbonosno da, a zatim ćemo s vama slaviti u Frankfurtu-Sachsenhausenu, uz zalazak sunca, roštilj i žurku do duboko u noć.","Heute ist es so weit":"Danas je taj dan","Heute ist es so weit!":"Danas je taj dan!","Morgen ist es so weit":"Sutra je taj dan","Danke, dass ihr dabei wart":"Hvala što ste bili s nama","Danke, dass ihr mit uns gefeiert habt!":"Hvala što ste slavili s nama!","Treffpunkt um 15:30 am Schloss Philippsruhe":"Okupljanje u 15:30 ispred dvorca Philippsruhe","Jetzt":"Sada","Als Nächstes":"Slijedi","Prüft kurz eure Angaben und tippt dann auf „Antwort jetzt absenden“. Es öffnet sich eine Bestätigung.":"Provjerite još jednom svoje podatke, pa dodirnite „Pošalji odgovor“. Otvoriće se potvrda.","Kopiert. Fügt den Text in eine Nachricht an uns ein.":"Kopirano. Zalijepite tekst u poruku za nas.","Text ist markiert. Kopiert ihn und fügt ihn in eine Nachricht an uns ein.":"Tekst je označen. Kopirajte ga i zalijepite u poruku za nas.","E-Mail-Adresse: ":"E-mail adresa: ","Rückmeldung Hochzeit: ":"Odgovor za vjenčanje: ","Hochzeit Tamara & Marvin, 22.05.2027":"Vjenčanje Tamare i Marvina, 22.05.2027.","Name: ":"Ime: ","Antwort: Wir sind dabei!":"Odgovor: Dolazimo!","Personen: ":"Broj osoba: ","Dabei bei: ":"Prisustvujemo: "," und ":" i ","noch offen":"još nije sigurno","Essen: ":"Ishrana: ","Allergie":"alergija","vegetarisch":"vegetarijanski","vegan":"veganski","Wir brauchen eine Mitfahrgelegenheit von Hanau nach Sachsenhausen":"Treba nam prevoz od Hanaua do Sachsenhausena","Antwort: Leider können wir nicht dabei sein.":"Odgovor: Nažalost ne možemo doći.","Nachricht: ":"Poruka: ","Extras":"Ekstra","Ruhiger Rückzugsort für Kinder":"Mirni kutak za djecu","Tischtennisplatte (nicht für Bierpong 😉)":"Sto za stoni tenis (ne za beer pong 😉)","Fernseher mit Nintendo Switch: Mario Kart und Mario Party":"Televizor sa Nintendo Switchom: Mario Kart i Mario Party","Ja, Kinder sind herzlich willkommen! Bei der Feier gibt es einen ruhigen Rückzugsort, an dem sie sich ausruhen können. Zählt sie bei der Rückmeldung einfach bei den Personen mit.":"Da, djeca su srdačno dobrodošla! Na proslavi postoji mirni kutak u kojem se mogu odmoriti. Samo ih uračunajte u broj osoba pri potvrdi dolaska.","Was gibt es neben der Tanzfläche?":"Šta ima osim plesnog podijuma?","Eine Tischtennisplatte (nicht für Bierpong 😉) und einen Fernseher mit Nintendo Switch für Mario Kart und Mario Party. Fordert euch gegenseitig heraus!":"Sto za stoni tenis (ne za beer pong 😉) i televizor sa Nintendo Switchom za Mario Kart i Mario Party. Izazovite jedni druge!","Zugang":"Pristup","Aufzug im Haus, das letzte Stockwerk zur Dachterrasse nur über eine kleine Treppe":"Lift u zgradi, do posljednjeg sprata s terasom samo malim stepeništem","Komme ich mit Rollator oder Kinderwagen gut hin?":"Mogu li lako stići sa hodalicom ili dječijim kolicima?","Bei der Feier gibt es einen Aufzug. Das letzte Stockwerk mit der Dachterrasse erreicht ihr allerdings nur über eine kleine Treppe. Wenn ihr dabei Hilfe braucht, sagt uns einfach vorher Bescheid.":"Na proslavi postoji lift. Do posljednjeg sprata s krovnom terasom ipak se stiže samo malim stepeništem. Ako vam tu treba pomoć, samo nam javite unaprijed.","Schrift größer":"Veći tekst","Adresse kopieren":"Kopiraj adresu","Kopiert ✓":"Kopirano ✓","Übersichtskarte: Hotels an der Messe, Hanau und Sachsenhausen":"Pregledna mapa: hoteli kod sajma, Hanau i Sachsenhausen","Hotels an der Messe":"Hoteli kod sajma","Main":"Majna","ca. 30 Min.":"oko 30 min","ca. 15 Min.":"oko 15 min","Hotel → Trauung":"Hotel → vjenčanje","Trauung → Feier":"Vjenčanje → proslava","Feier → Hotel":"Proslava → hotel","Ihr habt schon geantwortet":"Već ste odgovorili","Etwas hat sich geändert? Schickt einfach eine neue Antwort, wir zählen die neueste.":"Nešto se promijenilo? Samo pošaljite novi odgovor, računamo najnoviji.","Antwort ändern":"Promijeni odgovor","Bitte antwortet bis 1. März 2027.":"Molimo odgovorite do 1. marta 2027.","Antworten ›":"Odgovori ›","Hinweis schließen":"Zatvori obavještenje","Nach oben":"Na vrh","ab":"od","Für Nachteulen":"Za noćne ptice","Die Feier endet, die Nacht muss es nicht.":"Proslava se završava, noć ne mora.","Tipps für danach":"Savjeti za poslije","Ab 01:00 · Für Nachteulen":"Od 01:00 · Za noćne ptice","Noch nicht müde?":"Još niste umorni?","Frankfurt ist eine Stadt zum Ausgehen. Wer nach unserer Feier noch weiterziehen möchte, hat es von Sachsenhausen aus nicht weit.":"Frankfurt je grad za izlaske. Ko poslije naše proslave želi dalje, iz Sachsenhausena nema daleko.","Sachsenhausens Ausgehstraße mit Bars und Lokalen. Etwas ruhiger, gut für einen Absacker.":"Glavna ulica Sachsenhausena sa barovima i lokalima. Malo mirnije, idealno za posljednje piće.","Frankfurts bekanntes Kneipenviertel rund um Klappergasse und Rittergasse. Urig, laut und am Wochenende lange voll.":"Poznata kafanska četvrt Frankfurta oko Klappergasse i Rittergasse. Starinski, glasno i vikendom puno do kasno.","Innenstadt":"Centar grada","Clubs und Cocktailbars rund um Zeil und Hauptwache, nur ein paar Minuten über den Main.":"Klubovi i koktel barovi oko Zeila i Hauptwache, samo nekoliko minuta preko Majne.","zu Fuß ca. 15–20 Min.":"pješice oko 15–20 min","Taxi ca. 5 Min.":"taksijem oko 5 min","Taxi ca. 10 Min.":"taksijem oko 10 min","Auf der Karte ›":"Na mapi ›","Von allen drei Ecken seid ihr mit dem Taxi in rund 15 Minuten zurück bei den Hotels an der Messe.":"Iz sva tri kraja taksijem ste za oko 15 minuta nazad u hotelima kod sajma.","Noch nicht müde? Tipps für Nachteulen findet ihr hier.":"Još niste umorni? Savjete za noćne ptice naći ćete ovdje.","Tipps":"Savjeti","Schicke Garderobe":"Elegantna odjeća","Schicke Garderobe.":"Elegantna odjeća.","Treffpunkt am Schloss":"Okupljanje kod dvorca","Let's party!":"Vrijeme je za žurku!","18:00 Sektempfang":"18:00 doček","Ist die Feier barrierefrei?":"Da li je proslava pristupačna?","Anreise & Parken":"Dolazak i parking","Parken:":"Parking:","In Hanau direkt vor dem Schloss, in Sachsenhausen im Parkhaus am Henninger Turm. Details und Kartenlinks findet ihr oben bei „Trauung & Feier“.":"U Hanauu direktno ispred dvorca, u Sachsenhausenu u garaži kod Henninger Turma. Detalje i linkove za mape naći ćete gore u odjeljku „Vjenčanje i proslava“.","Übernachtung":"Smještaj","Rückmeldung · bis 1. März 2027":"Potvrda dolaska · do 1. marta 2027.","Unsere Empfehlung":"Naša preporuka","Für alle, die nach der Party in der Nähe der Feier schlafen möchten.":"Za sve koji poslije žurke žele da prespavaju u blizini proslave.","Ruhige Wohnlage in Laufweite zum Henninger Turm. Im Mai eher am oberen Ende der Spanne.":"Mirna stambena četvrt na pješačkoj udaljenosti od Henninger Turma. U maju je cijena bliže gornjoj granici.","Ziegelhüttenweg 43 · 4 Sterne":"Ziegelhüttenweg 43 · 4 zvjezdice","Designhotel mit Dachterrasse und Skyline-Blick. Zimmer für bis zu vier Personen, Tiefgarage im Haus. Zur Feier sind es wenige Minuten mit dem Taxi.":"Dizajnerski hotel sa krovnom terasom i pogledom na panoramu grada. Sobe za do četiri osobe, garaža u zgradi. Do proslave je nekoliko minuta taksijem.","ca. 80–120 €":"oko 80–120 €","Frühstück ca. 20 € p. P.":"Doručak oko 20 € po osobi"};
+  let LANG = 'de';
+  const t = k => (LANG === 'sr' && TX[k] != null) ? TX[k] : k;
+  const tNodes = [], tAttrs = [];
+  (function collect(){
+    const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    let n;
+    while ((n = w.nextNode())) {
+      const k = n.nodeValue.trim();
+      if (!k || TX[k] == null || n.parentElement.closest('script,style,#statement,#msg,#chip')) continue;
+      tNodes.push([n, n.nodeValue, k]);
+    }
+    $$('[placeholder],[aria-label],[alt],[title]').forEach(el => ['placeholder','aria-label','alt','title'].forEach(a => { const v = el.getAttribute(a); if (v && TX[v] != null) tAttrs.push([el, a, v]); }));
+  })();
+
+  /* ---------- Hochzeitstag & Vorschau (#live-1830 simuliert 18:30 Uhr am Hochzeitstag) ---------- */
+  const TAG = '2027-05-22';
+  const at = (hm, nextDay) => new Date(TAG + 'T' + hm + ':00+02:00').getTime() + (nextDay ? 864e5 : 0);
+  const sim = /^#live-(\d{2})(\d{2})$/.exec(location.hash);
+  const simOffset = sim ? at(sim[1] + ':' + sim[2], +sim[1] < 6) - Date.now() : 0;
+  const now = () => Date.now() + simOffset;
+
+  /* ---------- countdown ---------- */
+  const target = at('16:00'), dayStart = at('00:00');
+  const pad = n => String(n).padStart(2, '0');
+  function tick(){
+    const n = now(), diff = target - n, chip = $('#chip');
+    if (n >= dayStart) { $('#count').hidden = true; chip.textContent = n <= at('01:00', true) ? t('Heute ist es so weit') : t('Danke, dass ihr dabei wart'); return; }
+    const d = Math.floor(diff / 864e5), h = Math.floor(diff / 36e5) % 24, m = Math.floor(diff / 6e4) % 60, s = Math.floor(diff / 1e3) % 60;
+    $('#cd-d').textContent = d; $('#cd-h').textContent = pad(h); $('#cd-m').textContent = pad(m); $('#cd-s').textContent = pad(s);
+    if (d === 0) { chip.textContent = t('Morgen ist es so weit'); return; }
+    chip.innerHTML = LANG === 'sr'
+      ? 'Još <b>' + d + '</b> ' + (d % 10 === 1 && d % 100 !== 11 ? 'dan' : 'dana')
+      : 'Noch <b>' + d + '</b> ' + (d === 1 ? 'Tag' : 'Tage');
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ---------- Live-Modus am Hochzeitstag ---------- */
+  const ROUTE = {
+    schloss: 'https://www.google.com/maps/search/?api=1&query=Schloss%20Philippsruhe%2C%20Philippsruher%20Allee%2045%2C%2063454%20Hanau',
+    ooo: 'https://www.google.com/maps/search/?api=1&query=OutOfOffice%20Frankfurt%20Sachsenhausen%2C%20Geleitsstra%C3%9Fe%2014%2C%2060599%20Frankfurt%20am%20Main'
+  };
+  const PLAN = [
+    {s: at('15:30'), k: 'Treffpunkt am Schloss', time: '15:30', li: 0, r: 'schloss'},
+    {s: at('16:00'), k: 'Standesamtliche Trauung', time: '16:00', li: 1, r: 'schloss'},
+    {s: at('16:45'), k: 'Gemeinsam weiter nach Sachsenhausen', time: '', li: 2, r: 'ooo'},
+    {s: at('18:00'), k: 'Sektempfang & Sundowner', time: '18:00', li: 3, r: 'ooo'},
+    {s: at('19:00'), k: 'Abendessen', time: '19:00', li: 4, r: 'ooo'},
+    {s: at('20:00'), k: "Let's party!", time: '20:00', li: 5, r: 'ooo'}
+  ];
+  const liveEl = $('#live'), liEls = $$('#tl li');
+  function live(){
+    const n = now();
+    liEls.forEach(li => li.classList.remove('now'));
+    if (n < at('06:00') || n > at('14:00', true)) { liveEl.hidden = true; document.body.classList.remove('is-live'); return; }
+    liveEl.hidden = false; document.body.classList.add('is-live');
+    let k = '', cur = '', next = '', r = '';
+    if (n < PLAN[0].s) { k = t('Heute ist es so weit!'); cur = t('Treffpunkt um 15:30 am Schloss Philippsruhe'); r = 'schloss'; }
+    else if (n < at('01:00', true)) {
+      let i = PLAN.length - 1; while (i > 0 && n < PLAN[i].s) i--;
+      const c = PLAN[i], nx = PLAN[i + 1];
+      k = t('Jetzt'); cur = t(c.k); r = c.r;
+      next = nx ? t('Als Nächstes') + ': ' + (nx.time ? nx.time + ' ' : '') + t(nx.k) : t('bis 01:00');
+      if (liEls[c.li]) liEls[c.li].classList.add('now');
+    } else { k = '♥'; cur = t('Danke, dass ihr mit uns gefeiert habt!'); if (n < at('05:00', true)) { next = t('Noch nicht müde? Tipps für Nachteulen findet ihr hier.'); r = 'owl'; } }
+    $('#live-k').textContent = k; $('#live-now').textContent = cur; $('#live-next').textContent = next;
+    const route = $('#live-route'); route.hidden = !r;
+    const owl = r === 'owl';
+    $('.lr-route', route).hidden = owl; $('.lr-tips', route).hidden = !owl;
+    if (owl) { route.href = '#nachteulen'; route.removeAttribute('target'); }
+    else if (r) { route.href = ROUTE[r]; route.setAttribute('target', '_blank'); }
+    $('#live-dot').hidden = !r || owl;
+  }
+  live(); setInterval(live, 30000);
+
+  /* ---------- statement words ---------- */
+  const st = $('#statement');
+  const STATEMENT_DE = st.textContent.trim();
+  let wordEls = [];
+  function setStatement(text){
+    st.innerHTML = text.split(/\s+/).map(w => '<span class="w">' + w + '</span>').join(' ');
+    wordEls = $$('.w', st);
+  }
+  setStatement(STATEMENT_DE);
+
+  /* ---------- scroll engine ---------- */
+  const top = $('#top'), hero = $('#start'), stage = $('#stage'), slot = $('#slot');
+  const hphoto = $('#hphoto'), hsharp = $('#hsharp'), hsoft = $('#hsoft'), hshade = $('#hshade'), htint = $('#htint'), hover = $('#hover'), htext = $('#htext'), hint = $('#hint');
+  const rvs = $$('.rv');
+  const tl = $('#tl'), tlItems = $$('#tl li'), rail = $('.tl__rail');
+  const scenes = $$('[data-scene]').map(s => ({el: s, layers: $$('[data-depth]', s).map(g => [g, parseFloat(g.dataset.depth)])}));
+  const hs = $('#fotos'), track = $('#track'), hsbar = $('#hsbar'), trackImgs = $$('#track img');
+  let vh = innerHeight, vw = innerWidth, hsDist = 0, ticking = false;
+  const toTop = $('#totop'), remindEl = $('#remind'), zusageSec = $('#zusage');
+  const deadline = new Date('2027-03-02T00:00:00+01:00').getTime();
+  let remindDismissed = false; try { remindDismissed = sessionStorage.getItem('tm-remind-x') === '1'; } catch(e) {}
+  const answeredState = () => { try { return JSON.parse(localStorage.getItem('tm-answered') || 'null'); } catch(e) { return null; } };
+  toTop.addEventListener('click', () => scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'}));
+  $('#remind-x').addEventListener('click', () => { remindDismissed = true; try { sessionStorage.setItem('tm-remind-x', '1'); } catch(e) {} remindEl.classList.add('off'); });
+
+  function layout(){
+    vh = innerHeight; vw = innerWidth;
+    if (!reduce) {
+      hs.classList.add('pinned');
+      track.style.transform = '';
+      hsDist = Math.max(0, track.scrollWidth - vw);
+      hs.style.height = (vh + hsDist) + 'px';
+    }
+    update();
+  }
+
+  function update(){
+    ticking = false;
+    const y = scrollY;
+    top.classList.toggle('solid', y > 30);
+    toTop.classList.toggle('off', y < vh * 1.5);
+    if (remindEl) {
+      const zr = zusageSec.getBoundingClientRect();
+      const show = !answeredState() && !remindDismissed && now() < deadline && !document.body.classList.contains('is-live') && y > hero.offsetHeight * .9 && !(zr.top < vh && zr.bottom > 0);
+      remindEl.classList.toggle('off', !show);
+    }
+
+    // hero morph: the photo card grows to full screen, then melts into the blurred background
+    {
+      const total = hero.offsetHeight - vh;
+      const p = reduce ? 0 : clamp(y / total);
+      const e = ease(clamp(p / .5));
+      const sr = slot.getBoundingClientRect(), gr = stage.getBoundingClientRect();
+      const L = (sr.left - gr.left) * (1 - e), T = (sr.top - gr.top) * (1 - e);
+      const W = sr.width + (gr.width - sr.width) * e, Hh = sr.height + (gr.height - sr.height) * e;
+      hphoto.style.cssText = `left:${L.toFixed(1)}px;top:${T.toFixed(1)}px;width:${W.toFixed(1)}px;height:${Hh.toFixed(1)}px;border-radius:${(26 * (1 - e)).toFixed(1)}px`;
+      if (!reduce) {
+        hsharp.style.transform = `scale(${1.06 - .06 * e + .06 * clamp((p - .5) / .5)})`;
+        const tf = clamp(p / .32);
+        htext.style.transform = `translate3d(0, ${-60 * tf}px, 0) scale(${1 - .06 * tf})`;
+        htext.style.opacity = 1 - tf;
+        hint.style.opacity = 1 - clamp(p / .1);
+        const ov = clamp((p - .42) / .14) * (1 - clamp((p - .76) / .1));
+        hover.style.opacity = ov; hover.style.transform = `translate3d(0, ${(1 - clamp((p - .42) / .14)) * 30}px, 0)`;
+        hshade.style.opacity = clamp((p - .35) / .2) * (1 - clamp((p - .8) / .12));
+        const bl = clamp((p - .72) / .2);
+        hsoft.style.opacity = bl; htint.style.opacity = bl;
+        stage.style.opacity = 1 - clamp((p - .92) / .08);
+      }
+    }
+
+    // reveal (read all, then write)
+    if (!reduce) {
+      const vals = rvs.map(el => { const r = el.getBoundingClientRect(); return clamp((vh - r.top) / (vh * .32)); });
+      rvs.forEach((el, i) => el.style.setProperty('--r', vals[i].toFixed(3)));
+    }
+
+    // statement words
+    const sr2 = st.getBoundingClientRect();
+    const sp = clamp((vh * .82 - sr2.top) / (sr2.height + vh * .25));
+    const n = wordEls.length;
+    wordEls.forEach((w, i) => w.style.setProperty('--o', (.22 + .78 * clamp(sp * n * 1.05 - i)).toFixed(2)));
+
+    // timeline progress
+    const tr = tl.getBoundingClientRect();
+    const tp = clamp((vh * .6 - tr.top) / (tr.height - 40));
+    rail.style.setProperty('--tp', tp.toFixed(3));
+    const line = vh * .6;
+    tlItems.forEach(li => li.classList.toggle('on', li.getBoundingClientRect().top + 14 < line));
+
+    // parallax scenes
+    if (!reduce) scenes.forEach(s => {
+      const r = s.el.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > vh + 100) return;
+      const off = (r.top + r.height / 2 - vh / 2);
+      s.layers.forEach(([g, d]) => g.style.transform = `translate3d(0, ${(off * d * -.12).toFixed(1)}px, 0) scale(1.04)`);
+    });
+
+    // gallery pinned horizontal
+    if (!reduce && hsDist > 0) {
+      const r = hs.getBoundingClientRect();
+      const p = clamp(-r.top / (hs.offsetHeight - vh));
+      track.style.transform = `translate3d(${-p * hsDist}px, 0, 0)`;
+      hsbar.style.setProperty('--hp', p.toFixed(3));
+      trackImgs.forEach(img => { const ir = img.parentElement.getBoundingClientRect(); const c = (ir.left + ir.width / 2 - vw / 2) / vw; img.style.setProperty('--s', (1.04 + Math.min(.1, Math.abs(c) * .12)).toFixed(3)); });
+    }
+  }
+  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+  addEventListener('scroll', onScroll, {passive: true});
+  addEventListener('resize', () => { clearTimeout(layout.t); layout.t = setTimeout(layout, 120); });
+  addEventListener('load', layout);
+  layout();
+
+  /* ---------- ambient background + active nav ---------- */
+  const ambImgs = $$('.amb img');
+  const navLinks = $$('.tabbar a, .top__links a');
+  const ambSecs = $$('[data-amb]');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const k = en.target.dataset.amb;
+      ambImgs.forEach(im => im.classList.toggle('on', im.dataset.k === k));
+      const id = en.target.id;
+      if (id) { const map = {anreise:'orte', fotos:'zusage'}; navLinks.forEach(a => { const tgt = a.getAttribute('href').slice(1); a.classList.toggle('active', tgt === id || (a.closest('.tabbar') && tgt === map[id])); }); }
+    });
+  }, {rootMargin: '-48% 0px -48% 0px'});
+  ambSecs.forEach(s => io.observe(s));
+
+  /* ---------- smooth anchors ---------- */
+  $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1), el = id && document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    if (id === 'start') { scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'}); return; }
+    el.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'start'});
+  }));
+  if (location.hash && document.getElementById(location.hash.slice(1))) setTimeout(() => document.getElementById(location.hash.slice(1)).scrollIntoView(), 80);
+
+  /* ---------- hotel tabs ---------- */
+  const tabs = $$('.seg button');
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(o => { const on = o === t; o.setAttribute('aria-selected', on); document.getElementById(o.getAttribute('aria-controls')).hidden = !on; });
+  }));
+
+  /* ---------- RSVP ---------- */
+  const form = $('#rsvp');
+  const store = { get(){ try { return JSON.parse(localStorage.getItem('tm-rsvp') || 'null'); } catch(e){ return null; } }, set(v){ try { localStorage.setItem('tm-rsvp', JSON.stringify(v)); } catch(e){} } };
+  let persons = 1;
+  const out = $('#f-count'), minus = $('#f-minus'), plus = $('#f-plus');
+  function setPersons(n){ persons = Math.max(1, Math.min(8, n)); out.textContent = persons; minus.disabled = persons <= 1; plus.disabled = persons >= 8; }
+  minus.onclick = () => { setPersons(persons - 1); save(); };
+  plus.onclick = () => { setPersons(persons + 1); save(); };
+  const come = () => { const r = form.querySelector('input[name=come]:checked'); return r ? r.value : ''; };
+  const toggleYes = () => { const no = come() === 'nein'; $$('.yesonly', form).forEach(el => el.hidden = no); };
+  const checked = name => $$('input[name="' + name + '"]:checked', form).map(i => i.value);
+  function save(){ store.set({name: $('#f-name').value, come: come(), persons, teil: checked('teil'), essen: checked('essen'), extra: checked('extra'), allergie: $('#f-allergie').value, msg: $('#f-msg').value}); }
+  (function restore(){
+    const d = store.get(); if (!d) { setPersons(1); return; }
+    $('#f-name').value = d.name || '';
+    if (d.come) { const r = form.querySelector('input[name=come][value="' + d.come + '"]'); if (r) r.checked = true; }
+    setPersons(d.persons || 1);
+    ['teil','essen','extra'].forEach(n => { if (Array.isArray(d[n])) $$('input[name="' + n + '"]', form).forEach(i => i.checked = d[n].includes(i.value)); });
+    $('#f-allergie').value = d.allergie || ''; $('#f-msg').value = d.msg || '';
+    toggleYes();
+  })();
+  form.addEventListener('input', () => { toggleYes(); save(); });
+  form.addEventListener('change', () => { toggleYes(); save(); });
+  function buildMessage(){
+    const yes = come() === 'ja';
+    const lines = [t('Hochzeit Tamara & Marvin, 22.05.2027'), '', t('Name: ') + $('#f-name').value.trim()];
+    if (yes) {
+      lines.push(t('Antwort: Wir sind dabei!'), t('Personen: ') + persons);
+      const tl2 = checked('teil').map(t); lines.push(t('Dabei bei: ') + (tl2.length ? tl2.join(t(' und ')) : t('noch offen')));
+      const e = checked('essen'), a = $('#f-allergie').value.trim();
+      if (e.length || a) lines.push(t('Essen: ') + [e.filter(x => x !== 'Allergie').map(t).join(', '), (e.includes('Allergie') || a) ? (t('Allergie') + (a ? ': ' + a : '')) : ''].filter(Boolean).join(', '));
+      checked('extra').forEach(x => lines.push(t(x)));
+    } else lines.push(t('Antwort: Leider können wir nicht dabei sein.'));
+    const m = $('#f-msg').value.trim(); if (m) lines.push('', t('Nachricht: ') + m);
+    return lines.join('\n');
+  }
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const okName = $('#f-name').value.trim().length > 0, okCome = !!come();
+    $('#e-name').hidden = okName; $('#e-come').hidden = okCome;
+    if (!okName) { $('#f-name').focus(); return; }
+    if (!okCome) { $('#f-yes').focus(); return; }
+    renderResult();
+    const res = $('#result'); res.hidden = false;
+    res.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'start'});
+    setTimeout(layout, 50);
+  });
+  function renderResult(){
+    const msg = buildMessage();
+    $('#result-txt').textContent = t('Eure Antwort ist fertig. Schickt sie uns jetzt mit einem Tipp. Erst dann ist sie bei uns angekommen.');
+    $('#msg').textContent = msg;
+    const num = (KONTAKT.whatsapp || '').replace(/\D/g, '');
+    $('#send-wa').href = 'https://wa.me/' + num + '?text=' + encodeURIComponent(msg);
+    if (KONTAKT.rsvpUrl) {
+      const yes = come() === 'ja', teil = checked('teil'), ess = checked('essen'), ex = checked('extra'), al = $('#f-allergie').value.trim();
+      const q = new URLSearchParams({
+        name: $('#f-name').value.trim(), antwort: yes ? 'Zusage' : 'Absage', personen: yes ? persons : 0,
+        trauung: yes && teil.includes('Trauung in Hanau') ? 'ja' : 'nein', feier: yes && teil.includes('Feier in Sachsenhausen') ? 'ja' : 'nein',
+        essen: yes ? ess.filter(x => x !== 'Allergie').join(', ') : '', allergie: yes && (ess.includes('Allergie') || al) ? (al || 'ja, ohne Angabe') : '',
+        hotel: yes && ex.some(x => x.startsWith('Wir übernachten')) ? 'ja' : 'nein', mitfahrt: yes && ex.some(x => x.includes('Mitfahrgelegenheit')) ? 'ja' : 'nein',
+        nachricht: $('#f-msg').value.trim(), sprache: LANG
+      });
+      const r = $('#send-rsvp'); r.hidden = false; r.href = KONTAKT.rsvpUrl + (KONTAKT.rsvpUrl.includes('?') ? '&' : '?') + q.toString();
+      $('#send-wa').hidden = true;
+      $('#result-txt').textContent = t('Prüft kurz eure Angaben und tippt dann auf „Antwort jetzt absenden“. Es öffnet sich eine Bestätigung.');
+    }
+    if (KONTAKT.email) {
+      const mail = $('#send-mail'); mail.hidden = false;
+      mail.href = 'mailto:' + KONTAKT.email + '?subject=' + encodeURIComponent(t('Rückmeldung Hochzeit: ') + $('#f-name').value.trim()) + '&body=' + encodeURIComponent(msg);
+      const note = $('#mail-note'); note.hidden = false; note.textContent = t('E-Mail-Adresse: ') + KONTAKT.email;
+    }
+    $('#copy-note').hidden = true;
+  }
+  $('#copy').addEventListener('click', async () => {
+    let ok = false;
+    try { await navigator.clipboard.writeText($('#msg').textContent); ok = true; } catch(err) {}
+    const note = $('#copy-note');
+    if (!ok) { const r = document.createRange(); r.selectNodeContents($('#msg')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); note.textContent = t('Text ist markiert. Kopiert ihn und fügt ihn in eine Nachricht an uns ein.'); }
+    else note.textContent = t('Kopiert. Fügt den Text in eine Nachricht an uns ein.');
+    note.hidden = false;
+  });
+
+  /* ---------- lightbox ---------- */
+  const imgs = $$('#track img'), lb = $('#lb'), lbImg = $('#lb-img');
+  let cur = 0;
+  const show = i => { cur = (i + imgs.length) % imgs.length; lbImg.src = imgs[cur].src; lbImg.alt = imgs[cur].alt; };
+  $$('#track button').forEach(b => b.addEventListener('click', () => { show(+b.dataset.i); lb.showModal ? lb.showModal() : lb.setAttribute('open', ''); }));
+  const close = () => lb.close ? lb.close() : lb.removeAttribute('open');
+  $('#lb-close').onclick = close; $('#lb-prev').onclick = () => show(cur - 1); $('#lb-next').onclick = () => show(cur + 1);
+  $('#lb-in').addEventListener('click', e => { if (e.target.id === 'lb-in') close(); });
+  lb.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
+  let sx = null;
+  lb.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, {passive: true});
+  lb.addEventListener('touchend', e => { if (sx === null) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) show(cur + (dx < 0 ? 1 : -1)); sx = null; });
+
+  /* ---------- Schon geantwortet ---------- */
+  const fmtDate = ts => { const d = new Date(ts); return pad(d.getDate()) + '.' + pad(d.getMonth() + 1) + '.' + d.getFullYear() + (LANG === 'sr' ? '.' : ''); };
+  const persLabel = n => LANG === 'sr' ? ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 'osobe' : 'osoba') : (n === 1 ? 'Person' : 'Personen');
+  function renderAnswered(){
+    const a = answeredState();
+    const tab = $('.tabbar a[href="#zusage"]');
+    if (!a) { $('#answered').hidden = true; if (tab) tab.classList.remove('done'); return false; }
+    const yes = a.come === 'ja';
+    $('#answered-d').textContent = (yes ? t('Wir sind dabei') + ' · ' + a.persons + ' ' + persLabel(a.persons) : t('Leider nicht')) + ' · ' + fmtDate(a.ts);
+    $('#answered').hidden = false;
+    if (tab) tab.classList.add('done');
+    return true;
+  }
+  if (renderAnswered()) form.hidden = true;
+  ['#send-rsvp', '#send-wa', '#send-mail'].forEach(sel => $(sel).addEventListener('click', () => {
+    try { localStorage.setItem('tm-answered', JSON.stringify({come: come(), persons, ts: now()})); } catch(e) {}
+    setTimeout(() => {
+      renderAnswered(); form.hidden = true; $('#answered-edit').hidden = false;
+      $('#answered').scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'center'});
+      layout();
+    }, 600);
+  }));
+  $('#answered-edit').addEventListener('click', () => {
+    form.hidden = false; $('#answered-edit').hidden = true; $('#result').hidden = true;
+    form.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'start'});
+    setTimeout(layout, 50);
+  });
+
+  /* ---------- Adresse kopieren ---------- */
+  $$('.copy').forEach(b => b.addEventListener('click', async () => {
+    let ok = false;
+    try { await navigator.clipboard.writeText(b.dataset.copy); ok = true; } catch(e) {}
+    if (!ok) { const addr = b.previousElementSibling; const r = document.createRange(); r.selectNodeContents(addr); const s = getSelection(); s.removeAllRanges(); s.addRange(r); return; }
+    $('.c1', b).hidden = true; $('.c2', b).hidden = false;
+    setTimeout(() => { $('.c1', b).hidden = false; $('.c2', b).hidden = true; }, 2200);
+  }));
+
+  /* ---------- Schrift größer ---------- */
+  const fsBtn = $('#fs');
+  function setBig(on){
+    document.documentElement.classList.toggle('big', on);
+    fsBtn.setAttribute('aria-pressed', String(on));
+    try { localStorage.setItem('tm-big', on ? '1' : '0'); } catch(e) {}
+    setTimeout(layout, 30);
+  }
+  fsBtn.addEventListener('click', () => setBig(!document.documentElement.classList.contains('big')));
+  try { if (localStorage.getItem('tm-big') === '1') setBig(true); } catch(e) {}
+
+  /* ---------- Sprache umschalten ---------- */
+  function applyLang(l){
+    LANG = l === 'sr' ? 'sr' : 'de';
+    document.documentElement.lang = LANG === 'sr' ? 'sr-Latn' : 'de';
+    document.title = t('Hochzeit Tamara & Marvin');
+    tNodes.forEach(([n, orig, k]) => { n.nodeValue = LANG === 'sr' ? orig.replace(k, TX[k]) : orig; });
+    tAttrs.forEach(([el, a, v]) => el.setAttribute(a, t(v)));
+    $$('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.l === LANG)));
+    setStatement(LANG === 'sr' ? TX.__statement : STATEMENT_DE);
+    tick(); live(); renderAnswered();
+    if (!$('#result').hidden) renderResult();
+    try { localStorage.setItem('tm-lang', LANG); } catch(e) {}
+    setTimeout(layout, 30);
+  }
+  $$('.lang button').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.l)));
+  let saved = null; try { saved = localStorage.getItem('tm-lang'); } catch(e) {}
+  const prefersSr = (navigator.languages || [navigator.language || '']).some(x => /^(sr|bs|hr|sh|me|cnr)\b/i.test(x));
+  if ((saved || (prefersSr ? 'sr' : 'de')) === 'sr') applyLang('sr');
+})();
+</script>
+</body>
+</html>
