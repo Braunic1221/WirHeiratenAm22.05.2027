@@ -253,16 +253,10 @@ html:lang(sr-Latn) .choice label small{display:none}
 /* gallery: pinned horizontal scroll */
 .hs{position:relative;padding-top:96px}
 .hs__stage{display:grid;grid-template-columns:minmax(0,1fr);align-content:center;gap:26px}
-.hs__track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gutter) 10px;scrollbar-width:none}
+.hs__track{display:flex;gap:14px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);padding:0 var(--gutter) 10px;scrollbar-width:none}
 .hs__track::-webkit-scrollbar{display:none}
-.hs__track button{flex:none;height:min(60vh,520px);aspect-ratio:2/3;padding:0;border:0;border-radius:22px;overflow:hidden;cursor:zoom-in;scroll-snap-align:center;box-shadow:0 18px 40px -18px rgba(40,35,30,.4);background:#ddd}
-.hs__track button.w{aspect-ratio:3/2.2}
-.hs__track img{width:100%;height:100%;object-fit:cover;transform:scale(var(--s,1.06));transition:transform .2s linear}
-.hs__bar{height:3px;border-radius:3px;background:rgba(31,23,25,.1);overflow:hidden;max-width:240px;margin:0 auto}
-.hs__bar i{display:block;height:100%;width:calc(var(--hp,0) * 100%);background:var(--wine)}
-.hs.pinned{padding-top:0}
-.hs.pinned .hs__stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;padding-top:60px}
-.hs.pinned .hs__track{overflow:visible;scroll-snap-type:none;will-change:transform}
+.hs__track button{flex:none;height:min(60vh,520px);aspect-ratio:2/3;padding:0;border:0;border-radius:22px;overflow:hidden;cursor:zoom-in;scroll-snap-align:start;max-width:calc(100% - 28px);box-shadow:0 18px 40px -18px rgba(40,35,30,.4);background:#ddd}
+.hs__track img{display:block;width:100%;height:100%;object-fit:cover}
 dialog.lb{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%}
 dialog.lb::backdrop{background:rgba(16,15,14,.92);backdrop-filter:blur(8px)}
 .lb__in{position:fixed;inset:0;display:grid;place-items:center;padding:56px 12px}
@@ -273,7 +267,11 @@ dialog.lb::backdrop{background:rgba(16,15,14,.92);backdrop-filter:blur(8px)}
 /* footer */
 footer{padding:96px 0 calc(var(--nav-h) + 40px);text-align:center}
 @media (min-width:960px){footer{padding-bottom:48px}}
-.skyline{width:min(560px,100%);height:auto;opacity:.8}
+.hs__controls{display:flex;justify-content:center;gap:10px}
+.hs__controls button{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--paper,#f4f0e8);color:var(--wine);font-size:22px;cursor:pointer}
+.hs__controls button:disabled{opacity:.35;cursor:default}
+.hs__track button:focus-visible{outline-offset:-4px}
+.skyline{width:min(650px,100%);height:auto;color:var(--wine)}
 footer .mono{font-size:56px}
 footer p{color:var(--muted)}
 
@@ -918,31 +916,45 @@ body{overflow-wrap:break-word}
         <button type="button" data-i="4"><img src="assets/umarmung.jpg" alt="Tamara und Marvin umarmen sich am Meer" loading="lazy"></button>
         <button type="button" data-i="5"><img src="assets/portrait.jpg" alt="Marvin umarmt Tamara von hinten, der Ring ist zu sehen" loading="lazy"></button>
       </div>
-      <div class="hs__bar" id="hsbar"><i></i></div>
+      <div class="hs__controls" id="gallery-controls" hidden>
+        <button type="button" id="gallery-prev" aria-label="Vorheriges Foto" aria-controls="track">‹</button>
+        <button type="button" id="gallery-next" aria-label="Nächstes Foto" aria-controls="track">›</button>
+      </div>
     </div>
   </section>
 </main>
 
 <footer data-amb="hero">
   <div class="wrap" style="display:grid;gap:14px;justify-items:center">
-    <svg class="skyline" viewBox="0 0 600 150" role="img" aria-label="Skizze der Frankfurter Skyline">
-      <g style="fill:rgba(244,240,232,.9)" stroke="#6E1E2F" stroke-width="1.1" stroke-linejoin="round">
-        <rect x="18" y="104" width="30" height="26"/><rect x="50" y="94" width="22" height="36"/>
-        <rect x="86" y="58" width="12" height="72"/><rect x="79" y="36" width="26" height="24" rx="5"/><path d="M92 36V20"/>
-        <rect x="114" y="90" width="26" height="40"/><rect x="142" y="76" width="18" height="54"/>
-        <rect x="170" y="72" width="20" height="58"/><path d="M170 72 180 40 190 72Z"/><path d="M180 40v-8"/>
-        <rect x="196" y="86" width="24" height="44"/>
-        <rect x="228" y="40" width="26" height="90" rx="3"/><path d="M241 40V14"/>
-        <rect x="260" y="24" width="30" height="106"/><path d="M260 52h30M260 84h30M275 24V6"/>
-        <rect x="296" y="48" width="20" height="82"/>
-        <rect x="322" y="70" width="22" height="60"/><rect x="346" y="94" width="30" height="36"/>
-        <rect x="380" y="42" width="24" height="88"/><path d="M380 42 392 22 404 42Z"/><path d="M392 22v-7"/>
-        <rect x="410" y="54" width="22" height="76"/><path d="M410 54l11-8 11 8"/>
-        <rect x="438" y="92" width="26" height="38"/><rect x="468" y="102" width="18" height="28"/>
-        <rect x="490" y="86" width="30" height="44"/><rect x="524" y="100" width="24" height="30"/><rect x="552" y="108" width="30" height="22"/>
+    <svg class="skyline" viewBox="0 0 720 236" role="img" aria-label="Skizze der Frankfurter Skyline">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Buildings seen across the Main -->
+        <g stroke-width="1.3" opacity=".48">
+          <path d="M22 190v-19h20v-12h27v31m8 0v-27h16v-22h24v49m9 0v-38h17v-15h18v53m11 0v-34h25m48 34v-43h19v-21h22v64m167 0v-51h22v-10h21v61m82 0v-28h17v-14h26v42m7 0v-34h18v-10h23v44m5 0v-20h17v-7h17v27"/>
+          <path d="M99 148h12m-12 8h12m-12 8h12m32-20h11m-11 8h11m113-22h13m-13 8h13m182 5h19m-19 8h19m124 8h15m-15 8h15"/>
+        </g>
+        <g stroke-width="1.8">
+          <!-- Messeturm -->
+          <path d="M178 190v-62h9V91h9V78l19-39 19 39v13h9v37h9v62m-56-99h38m-47 37h56m-28-89v-9"/>
+          <!-- Main Tower -->
+          <path d="M281 190v-57h14V81q17-9 34 0v109m-34-93q17-9 34 0m-17-20V43"/>
+          <!-- Commerzbank Tower -->
+          <path d="M340 190V59l16-11V30l20-9 19 10v19l15 9v131m-54-142 20 8 19-6m-19-29V7m0 49v134"/>
+          <!-- Westend Tower -->
+          <path d="M420 190V84h9V69l28-13 21 14-16 9v111m-33-121 16 12 33-11m-33 11v109"/>
+          <!-- Frankfurt Cathedral -->
+          <path d="M503 190v-34h17v-25h7v-16h6v-15l9-12 9 12v15h6v16h7v25h18v34m-40-102V77m-4 4h8m-13 19h18m-24 31h30m-37 25h44m-29 34v-14q7-13 14 0v14"/>
+        </g>
+        <g stroke-width=".9" opacity=".56">
+          <path d="M202 99v90m13-90v90m13-90v90m-26-75h26m-26 28h26m-26 17h26m-26 17h26"/>
+          <path d="M302 105v80m10-84v84m10-80v80m-27-65q17-7 34 0m-34 18q17-7 34 0m-34 18q17-7 34 0m-34 18q17-7 34 0"/>
+          <path d="M347 68l17-8v125m-17-101 17-8m-17 29 17-8m-17 29 17-8m-17 29 17-8m-17 29 17-8m22-98 15 6v116m-15-94 15 6m-15 16 15 6m-15 16 15 6m-15 16 15 6m-15 16 15 6"/>
+          <path d="M428 97v86m8-82v82m16-86v86m-25-62 18 4 17-4m-35 24 18 4 17-4m-35 24 18 4 17-4"/>
+          <path d="M538 123v-9q4-8 8 0v9m-9 24v-5q5-8 10 0v5zM510 176v-8m65 8v-8"/>
+        </g>
+        <path d="M12 190h696" stroke-width="1.5"/>
+        <path d="M34 202h110m22 0h132m14 0h90m26 0h85m21 0h151M66 211h170m28 0h185m31 0h164M118 221h106m24 0h82m25 0h135m26 0h77" stroke-width=".9" opacity=".42"/>
       </g>
-      <path d="M8 130h584" stroke="#6E1E2F" stroke-width="1.1"/>
-      <path d="M40 138c20-3 40 3 60 0s40-3 60 0 40 3 60 0 40-3 60 0 40 3 60 0 40-3 60 0 40 3 60 0 40-3 60 0" fill="none" stroke="#6E1E2F" stroke-width=".8" opacity=".5"/>
     </svg>
     <a class="mono" href="#start">T &amp; M</a>
     <p class="label">22 · 05 · 2027</p>
@@ -1075,8 +1087,8 @@ body{overflow-wrap:break-word}
   const rvs = $$('.rv');
   const tl = $('#tl'), tlItems = $$('#tl li'), rail = $('.tl__rail');
   const scenes = $$('[data-scene]').map(s => ({el: s, layers: $$('[data-depth]', s).map(g => [g, parseFloat(g.dataset.depth)])}));
-  const hs = $('#fotos'), track = $('#track'), hsbar = $('#hsbar'), trackImgs = $$('#track img');
-  let vh = innerHeight, vw = innerWidth, hsDist = 0, ticking = false;
+  const track = $('#track');
+  let vh = innerHeight, vw = innerWidth, ticking = false;
   const toTop = $('#totop'), remindEl = $('#remind'), zusageSec = $('#zusage');
   const deadline = new Date('2027-03-02T00:00:00+01:00').getTime();
   let remindDismissed = false; try { remindDismissed = sessionStorage.getItem('tm-remind-x') === '1'; } catch(e) {}
@@ -1088,12 +1100,7 @@ body{overflow-wrap:break-word}
 
   function layout(){
     vh = innerHeight; vw = innerWidth;
-    if (!reduce) {
-      hs.classList.add('pinned');
-      track.style.transform = '';
-      hsDist = Math.max(0, track.scrollWidth - vw);
-      hs.style.height = (vh + hsDist) + 'px';
-    }
+    updateGalleryControls();
     update();
   }
 
@@ -1159,14 +1166,6 @@ body{overflow-wrap:break-word}
       s.layers.forEach(([g, d]) => g.style.transform = `translate3d(0, ${(off * d * -.12).toFixed(1)}px, 0) scale(1.04)`);
     });
 
-    // gallery pinned horizontal
-    if (!reduce && hsDist > 0) {
-      const r = hs.getBoundingClientRect();
-      const p = clamp(-r.top / (hs.offsetHeight - vh));
-      track.style.transform = `translate3d(${-p * hsDist}px, 0, 0)`;
-      hsbar.style.setProperty('--hp', p.toFixed(3));
-      trackImgs.forEach(img => { const ir = img.parentElement.getBoundingClientRect(); const c = (ir.left + ir.width / 2 - vw / 2) / vw; img.style.setProperty('--s', (1.04 + Math.min(.1, Math.abs(c) * .12)).toFixed(3)); });
-    }
   }
   const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
   addEventListener('scroll', onScroll, {passive: true});
@@ -1276,6 +1275,22 @@ body{overflow-wrap:break-word}
     $('#answered').focus({preventScroll: true});
     $('#answered').scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'center'});
   });
+
+  /* ---------- Foto-Galerie ---------- */
+  const galleryControls = $('#gallery-controls'), galleryPrev = $('#gallery-prev'), galleryNext = $('#gallery-next');
+  function updateGalleryControls(){
+    const max = track.scrollWidth - track.clientWidth;
+    galleryControls.hidden = max <= 1;
+    galleryPrev.disabled = track.scrollLeft <= 1;
+    galleryNext.disabled = track.scrollLeft >= max - 1;
+  }
+  function moveGallery(direction){
+    const step = track.children[1].offsetLeft - track.children[0].offsetLeft;
+    track.scrollBy({left: direction * step, behavior: reduce ? 'instant' : 'smooth'});
+  }
+  galleryPrev.addEventListener('click', () => moveGallery(-1));
+  galleryNext.addEventListener('click', () => moveGallery(1));
+  track.addEventListener('scroll', updateGalleryControls, {passive:true});
 
   /* ---------- lightbox ---------- */
   const imgs = $$('#track img'), lb = $('#lb'), lbImg = $('#lb-img');
