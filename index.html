@@ -240,11 +240,11 @@ section.block{padding:96px 0 0}
 input[type=text],textarea{width:100%;font:inherit;font-size:17px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.85);color:var(--ink)}
 input:focus,textarea:focus{outline:2px solid var(--olive);outline-offset:0;border-color:transparent}
 textarea{min-height:96px;resize:vertical}
-.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .choice input,.chips input{position:absolute;opacity:0;pointer-events:none}
-.choice label{display:grid;gap:2px;text-align:center;padding:16px 10px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.85);cursor:pointer;font-weight:600;transition:all .25s var(--ease)}
+.choice label{display:grid;align-content:center;gap:4px;min-height:72px;padding:12px 10px;text-align:center;line-height:1.25;overflow-wrap:anywhere;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.85);cursor:pointer;font-weight:600;transition:all .25s var(--ease)}
 .choice label small{font-weight:400;color:var(--muted);font-size:14px}
-.choice input:checked + label{border-color:var(--wine);background:var(--wine);color:var(--paper);transform:scale(1.02)}
+.choice input:checked + label{border-color:var(--wine);background:var(--wine);color:var(--paper)}
 .choice input:checked + label small{color:rgba(244,240,232,.75)}
 html:lang(sr-Latn) .choice label small{display:none}
 .choice input:focus-visible + label,.chips input:focus-visible + label{outline:2px solid var(--olive);outline-offset:2px}
@@ -865,8 +865,8 @@ body{overflow-wrap:break-word}
         <div class="field">
           <p class="flabel" id="l-come">Kommt ihr?</p>
           <div class="choice" role="radiogroup" aria-labelledby="l-come">
-            <input type="radio" id="f-yes" name="come" value="ja"><label for="f-yes">Wir sind dabei<small>Wir freuen uns!</small></label>
-            <input type="radio" id="f-no" name="come" value="nein"><label for="f-no">Leider nicht<small>Wir denken an euch</small></label>
+            <input type="radio" id="f-yes" name="come" value="ja"><label for="f-yes"><span>Wir sind dabei</span><small>Wir freuen uns!</small></label>
+            <input type="radio" id="f-no" name="come" value="nein"><label for="f-no"><span>Leider nicht</span><small>Wir denken an euch</small></label>
           </div>
           <p class="err" id="e-come" hidden>Bitte wählt aus, ob ihr kommt.</p>
         </div>
