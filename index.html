@@ -118,7 +118,6 @@ section.block{padding:96px 0 0}
 /* intro statement */
 .statement{font-family:var(--font-display);font-size:clamp(28px,6.4vw,46px);line-height:1.22;letter-spacing:-.005em}
 .statement .w{opacity:var(--o,1);transition:opacity .25s linear}
-.sign{color:var(--wine);font-family:var(--font-script);font-size:40px;line-height:1;margin-top:22px}
 
 /* countdown + facts */
 .count{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
@@ -465,7 +464,6 @@ body{overflow-wrap:break-word}
     <div class="wrap narrow">
       <h2 id="h-intro" class="label" style="margin-bottom:18px">Ihr Lieben,</h2>
       <p class="statement" id="statement">auf Korfu hat Tamara Ja gesagt. Jetzt sind wir beide dran! Am 22. Mai 2027 heiraten wir und freuen uns riesig darauf, diesen Tag mit euch zu verbringen. Auf viele Umarmungen, volle Gläser und darauf, dass wir uns auf der Tanzfläche sehen!</p>
-      <p class="sign rv"><span id="intro-farewell">Alles Liebe<br></span>Tamara &amp; Marvin</p>
     </div>
   </section>
 
@@ -1379,7 +1377,6 @@ const KONTAKT = { rsvpUrl: "", whatsapp: "", email: "" };
     tAttrs.forEach(([el, a, v]) => el.setAttribute(a, t(v)));
     $$('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.l === LANG)));
     setStatement(LANG === 'sr' ? TX.__statement : STATEMENT_DE);
-    $('#intro-farewell').hidden = LANG === 'sr';
     tick(); live(); renderAnswered();
     if (!$('#result').hidden) renderResult();
     try { localStorage.setItem('tm-lang', LANG); } catch(e) {}
