@@ -1098,6 +1098,22 @@ body{overflow-wrap:break-word}
   toTop.addEventListener('click', () => scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'}));
   $('#remind-x').addEventListener('click', () => { remindDismissed = true; try { sessionStorage.setItem('tm-remind-x', '1'); } catch(e) {} remindEl.classList.add('off'); });
 
+  /* ---------- Foto-Galerie ---------- */
+  const galleryControls = $('#gallery-controls'), galleryPrev = $('#gallery-prev'), galleryNext = $('#gallery-next');
+  function updateGalleryControls(){
+    const max = track.scrollWidth - track.clientWidth;
+    galleryControls.hidden = max <= 1;
+    galleryPrev.disabled = track.scrollLeft <= 1;
+    galleryNext.disabled = track.scrollLeft >= max - 1;
+  }
+  function moveGallery(direction){
+    const step = track.children[1].offsetLeft - track.children[0].offsetLeft;
+    track.scrollBy({left: direction * step, behavior: reduce ? 'instant' : 'smooth'});
+  }
+  galleryPrev.addEventListener('click', () => moveGallery(-1));
+  galleryNext.addEventListener('click', () => moveGallery(1));
+  track.addEventListener('scroll', updateGalleryControls, {passive:true});
+
   function layout(){
     vh = innerHeight; vw = innerWidth;
     updateGalleryControls();
@@ -1275,22 +1291,6 @@ body{overflow-wrap:break-word}
     $('#answered').focus({preventScroll: true});
     $('#answered').scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'center'});
   });
-
-  /* ---------- Foto-Galerie ---------- */
-  const galleryControls = $('#gallery-controls'), galleryPrev = $('#gallery-prev'), galleryNext = $('#gallery-next');
-  function updateGalleryControls(){
-    const max = track.scrollWidth - track.clientWidth;
-    galleryControls.hidden = max <= 1;
-    galleryPrev.disabled = track.scrollLeft <= 1;
-    galleryNext.disabled = track.scrollLeft >= max - 1;
-  }
-  function moveGallery(direction){
-    const step = track.children[1].offsetLeft - track.children[0].offsetLeft;
-    track.scrollBy({left: direction * step, behavior: reduce ? 'instant' : 'smooth'});
-  }
-  galleryPrev.addEventListener('click', () => moveGallery(-1));
-  galleryNext.addEventListener('click', () => moveGallery(1));
-  track.addEventListener('scroll', updateGalleryControls, {passive:true});
 
   /* ---------- lightbox ---------- */
   const imgs = $$('#track img'), lb = $('#lb'), lbImg = $('#lb-img');
